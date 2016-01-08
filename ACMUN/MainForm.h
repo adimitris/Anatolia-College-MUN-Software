@@ -107,12 +107,6 @@ namespace ACMUN {
 	private: System::Windows::Forms::Button^  buttonAddRecord;
 
 
-
-
-
-
-
-
 	private: System::Windows::Forms::GroupBox^  groupBox6;
 	private: System::Windows::Forms::Button^  buttonAddCurrentSpeaker;
 
