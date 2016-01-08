@@ -17,6 +17,8 @@
 	To contact the author: Dimitrios Alexandridis, dimitrisalex@icloud.com
 */
 
+//Dependencies: MSCVR120.dll, MSVCP120.dll
+
 #pragma once
 #include <time.h>
 #include <string>
@@ -1323,11 +1325,27 @@ private: System::Void buttonExit_Click(System::Object^  sender, System::EventArg
 	//Application::Exit();
 }
 private: System::Void buttonTopicChange_Click(System::Object^  sender, System::EventArgs^  e) {
+	String^ PreviousTopic = this->labelTopic->Text;
 	ChangeTopic^ TopicDialog = gcnew ChangeTopic();
 	TopicDialog->textBoxTopic->Text = this->labelTopic->Text;
 	TopicDialog->ShowDialog();
 	this->labelTopic->Text = TopicDialog->textBoxTopic->Text;
-	this->buttonSaveRecord->PerformClick();
+
+	//If topic has changed.
+	if (PreviousTopic != this->labelTopic->Text) {
+
+		this->buttonSaveRecord->PerformClick();
+
+		if (this->textBoxRecord->Text->Length == 0) {
+			this->textBoxRecord->AppendText("-Topic: ");
+			this->textBoxRecord->AppendText(this->labelTopic->Text);
+		}
+		else {
+			this->textBoxRecord->AppendText("\r\n\r\n");
+			this->textBoxRecord->AppendText("-Topic: ");
+			this->textBoxRecord->AppendText(this->labelTopic->Text);
+		}
+	}
 }
 private: System::Void buttonCrisis_Click(System::Object^  sender, System::EventArgs^  e) {
 	MainForm^ CrisisDialog = gcnew MainForm();
