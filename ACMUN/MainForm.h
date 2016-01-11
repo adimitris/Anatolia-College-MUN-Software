@@ -175,6 +175,8 @@ private: System::Windows::Forms::Panel^  panel7;
 private: System::Windows::Forms::Panel^  panel6;
 private: System::Windows::Forms::Label^  label4;
 private: System::Windows::Forms::LinkLabel^  linkLabel1;
+private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 
 
 
@@ -204,78 +206,79 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::ListViewItem^  listViewItem37 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"1",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem38 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"2",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem39 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"3",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem40 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"4",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem41 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"5",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem42 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"6",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem43 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"7",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem44 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"8",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem45 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"9",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem46 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem47 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem48 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem49 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem50 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem51 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem15 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem52 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem16 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem53 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem17 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem54 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem18 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->labelTime = (gcnew System::Windows::Forms::Label());
 			this->timerLocalTime = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -338,6 +341,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->timerCountdown = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox6->SuspendLayout();
@@ -351,6 +355,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->panel4->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->groupBox7->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// labelTime
@@ -378,8 +383,9 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			// 
 			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->labelCountdown);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->labelCommitteeName);
@@ -418,7 +424,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->labelCommitteeName->AutoSize = true;
 			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->labelCommitteeName->Location = System::Drawing::Point(4, 50);
+			this->labelCommitteeName->Location = System::Drawing::Point(95, 44);
 			this->labelCommitteeName->Name = L"labelCommitteeName";
 			this->labelCommitteeName->Size = System::Drawing::Size(224, 31);
 			this->labelCommitteeName->TabIndex = 3;
@@ -427,17 +433,17 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			// labelTitle
 			// 
 			this->labelTitle->AutoSize = true;
-			this->labelTitle->Font = (gcnew System::Drawing::Font(L"Times New Roman", 27, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelTitle->Font = (gcnew System::Drawing::Font(L"Cambria", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->labelTitle->Location = System::Drawing::Point(3, 9);
+			this->labelTitle->Location = System::Drawing::Point(94, 7);
 			this->labelTitle->Name = L"labelTitle";
-			this->labelTitle->Size = System::Drawing::Size(579, 41);
+			this->labelTitle->Size = System::Drawing::Size(548, 37);
 			this->labelTitle->TabIndex = 2;
 			this->labelTitle->Text = L"Anatolia College Model United Nations";
 			// 
 			// panel2
 			// 
-			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel2->Controls->Add(this->groupBox6);
 			this->panel2->Controls->Add(this->labelCountrySpeaking);
@@ -600,8 +606,8 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 					this->SpeakerName
 			});
 			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem37,
-					listViewItem38, listViewItem39, listViewItem40, listViewItem41, listViewItem42, listViewItem43, listViewItem44, listViewItem45
+				listViewItem1,
+					listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9
 			});
 			this->listViewSpeakerList->Location = System::Drawing::Point(3, 51);
 			this->listViewSpeakerList->Name = L"listViewSpeakerList";
@@ -780,7 +786,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			// 
 			// panel4
 			// 
-			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel4->Controls->Add(this->comboBoxResNumToRemove);
 			this->panel4->Controls->Add(this->buttonRemoveResolution);
@@ -832,8 +838,8 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 					this->columnHeader2
 			});
 			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem46,
-					listViewItem47, listViewItem48, listViewItem49, listViewItem50, listViewItem51, listViewItem52, listViewItem53, listViewItem54
+				listViewItem10,
+					listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18
 			});
 			this->listViewResolutions->Location = System::Drawing::Point(12, 34);
 			this->listViewResolutions->Name = L"listViewResolutions";
@@ -866,7 +872,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			// 
 			// panel5
 			// 
-			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel5->Controls->Add(this->groupBox7);
 			this->panel5->Controls->Add(this->buttonTopicChange);
@@ -1032,6 +1038,17 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->linkLabel1->Text = L"Dimitris Alexandridis";
 			this->linkLabel1->Click += gcnew System::EventHandler(this, &MainForm::linkLabel1_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(3, 3);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(86, 79);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 6;
+			this->pictureBox1->TabStop = false;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1048,6 +1065,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"MainForm";
 			this->Text = L"ACMUN";
@@ -1072,6 +1090,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel1;
 			this->panel5->PerformLayout();
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
