@@ -38,6 +38,9 @@ namespace ACMUN {
 	int ResCount = 0;
 	int CountdownMin = 0;
 	int CountdownSec = 0;
+	int CountdownHour = 0;
+	bool isSpeakerSlotOccupied[9] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	bool isRecordReadOnly = 1;
 
 
 	/// <summary>
@@ -97,7 +100,8 @@ namespace ACMUN {
 	private: System::Windows::Forms::Button^  buttonNextSpeaker;
 
 	private: System::Windows::Forms::Panel^  panel3;
-	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  labelSessionRecord;
+
 	private: System::Windows::Forms::Label^  labelCountrySpeaking;
 
 
@@ -133,7 +137,7 @@ namespace ACMUN {
 
 
 	private: System::Windows::Forms::Label^  label9;
-	private: System::Windows::Forms::Label^  labelCountdown;
+
 	private: System::Windows::Forms::Button^  buttonRemoveResolution;
 
 
@@ -170,12 +174,17 @@ private: System::Windows::Forms::ComboBox^  comboBoxCommitteeStatus;
 private: System::Windows::Forms::Button^  buttonTopicChange;
 private: System::Windows::Forms::ComboBox^  comboBoxResNumToRemove;
 private: System::Windows::Forms::Timer^  timerCountdown;
-private: System::Windows::Forms::Label^  label2;
+
 private: System::Windows::Forms::Panel^  panel7;
 private: System::Windows::Forms::Panel^  panel6;
 private: System::Windows::Forms::Label^  label4;
 private: System::Windows::Forms::LinkLabel^  linkLabel1;
 private: System::Windows::Forms::PictureBox^  pictureBox1;
+private: System::Windows::Forms::Label^  labelCountdown;
+
+private: System::Windows::Forms::Label^  label5;
+private: System::Windows::Forms::ComboBox^  comboBoxTimerHour;
+private: System::Windows::Forms::Button^  buttonEditRecord;
 
 
 
@@ -206,84 +215,85 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+			System::Windows::Forms::ListViewItem^  listViewItem19 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"1",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem20 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"2",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem21 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"3",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem22 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"4",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem23 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"5",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem24 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"6",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem25 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"7",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem26 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"8",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem27 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"9",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem28 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem29 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem30 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem31 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem32 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem15 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem33 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem16 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem34 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem17 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem35 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem18 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem36 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->labelTime = (gcnew System::Windows::Forms::Label());
 			this->timerLocalTime = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->labelCountdown = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->labelTopic = (gcnew System::Windows::Forms::Label());
 			this->labelCommitteeName = (gcnew System::Windows::Forms::Label());
 			this->labelTitle = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -304,10 +314,9 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->priorityNum = (gcnew System::Windows::Forms::ColumnHeader());
 			this->SpeakerName = (gcnew System::Windows::Forms::ColumnHeader());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->labelCountdown = (gcnew System::Windows::Forms::Label());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->labelLatestRecord = (gcnew System::Windows::Forms::Label());
-			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->labelTopic = (gcnew System::Windows::Forms::Label());
 			this->textBoxRecord = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonUpdateCommitteeStatus = (gcnew System::Windows::Forms::Button());
@@ -317,7 +326,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonAddRecord = (gcnew System::Windows::Forms::Button());
 			this->richTextBoxRecordToAdd = (gcnew System::Windows::Forms::RichTextBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->labelSessionRecord = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->comboBoxResNumToRemove = (gcnew System::Windows::Forms::ComboBox());
 			this->buttonRemoveResolution = (gcnew System::Windows::Forms::Button());
@@ -327,7 +336,10 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->columnHeader2 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->buttonEditRecord = (gcnew System::Windows::Forms::Button());
 			this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->comboBoxTimerHour = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBoxTimerSec = (gcnew System::Windows::Forms::ComboBox());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->buttonTimerSet = (gcnew System::Windows::Forms::Button());
@@ -341,21 +353,20 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->timerCountdown = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->panel6->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox6->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel7->SuspendLayout();
-			this->panel6->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox5->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->groupBox7->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// labelTime
@@ -386,8 +397,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel1->Controls->Add(this->pictureBox1);
-			this->panel1->Controls->Add(this->labelCountdown);
-			this->panel1->Controls->Add(this->label2);
+			this->panel1->Controls->Add(this->panel6);
 			this->panel1->Controls->Add(this->labelCommitteeName);
 			this->panel1->Controls->Add(this->labelTitle);
 			this->panel1->Controls->Add(this->labelTime);
@@ -397,27 +407,35 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->panel1->Size = System::Drawing::Size(1087, 118);
 			this->panel1->TabIndex = 2;
 			// 
-			// labelCountdown
+			// pictureBox1
 			// 
-			this->labelCountdown->AutoSize = true;
-			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(3, 3);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(86, 79);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 6;
+			this->pictureBox1->TabStop = false;
+			// 
+			// panel6
+			// 
+			this->panel6->Controls->Add(this->labelTopic);
+			this->panel6->Location = System::Drawing::Point(95, 78);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(927, 37);
+			this->panel6->TabIndex = 16;
+			// 
+			// labelTopic
+			// 
+			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->labelCountdown->Location = System::Drawing::Point(542, 75);
-			this->labelCountdown->Name = L"labelCountdown";
-			this->labelCountdown->Size = System::Drawing::Size(87, 33);
-			this->labelCountdown->TabIndex = 4;
-			this->labelCountdown->Text = L"00:00";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->label2->Location = System::Drawing::Point(450, 75);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(99, 33);
-			this->label2->TabIndex = 5;
-			this->label2->Text = L"Timer:";
+			this->labelTopic->Location = System::Drawing::Point(0, 0);
+			this->labelTopic->Name = L"labelTopic";
+			this->labelTopic->Size = System::Drawing::Size(927, 37);
+			this->labelTopic->TabIndex = 8;
+			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// labelCommitteeName
 			// 
@@ -606,8 +624,8 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 					this->SpeakerName
 			});
 			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem1,
-					listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9
+				listViewItem19,
+					listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24, listViewItem25, listViewItem26, listViewItem27
 			});
 			this->listViewSpeakerList->Location = System::Drawing::Point(3, 51);
 			this->listViewSpeakerList->Name = L"listViewSpeakerList";
@@ -630,18 +648,29 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
+			this->panel3->Controls->Add(this->labelCountdown);
 			this->panel3->Controls->Add(this->panel7);
-			this->panel3->Controls->Add(this->panel6);
 			this->panel3->Controls->Add(this->textBoxRecord);
 			this->panel3->Controls->Add(this->groupBox3);
 			this->panel3->Controls->Add(this->label1);
 			this->panel3->Controls->Add(this->labelCommitteeStatus);
 			this->panel3->Controls->Add(this->groupBox5);
-			this->panel3->Controls->Add(this->label6);
+			this->panel3->Controls->Add(this->labelSessionRecord);
 			this->panel3->Location = System::Drawing::Point(201, 121);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(682, 508);
 			this->panel3->TabIndex = 4;
+			// 
+			// labelCountdown
+			// 
+			this->labelCountdown->AutoSize = true;
+			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(161)));
+			this->labelCountdown->Location = System::Drawing::Point(266, 66);
+			this->labelCountdown->Name = L"labelCountdown";
+			this->labelCountdown->Size = System::Drawing::Size(151, 39);
+			this->labelCountdown->TabIndex = 4;
+			this->labelCountdown->Text = L"00:00:00";
 			// 
 			// panel7
 			// 
@@ -660,25 +689,6 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->labelLatestRecord->Name = L"labelLatestRecord";
 			this->labelLatestRecord->Size = System::Drawing::Size(453, 68);
 			this->labelLatestRecord->TabIndex = 11;
-			// 
-			// panel6
-			// 
-			this->panel6->Controls->Add(this->labelTopic);
-			this->panel6->Location = System::Drawing::Point(9, 57);
-			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(664, 52);
-			this->panel6->TabIndex = 16;
-			// 
-			// labelTopic
-			// 
-			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelTopic->Location = System::Drawing::Point(0, 0);
-			this->labelTopic->Name = L"labelTopic";
-			this->labelTopic->Size = System::Drawing::Size(664, 52);
-			this->labelTopic->TabIndex = 8;
-			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// textBoxRecord
 			// 
@@ -773,16 +783,16 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->richTextBoxRecordToAdd->TabIndex = 0;
 			this->richTextBoxRecordToAdd->Text = L"";
 			// 
-			// label6
+			// labelSessionRecord
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelSessionRecord->AutoSize = true;
+			this->labelSessionRecord->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->label6->Location = System::Drawing::Point(5, 176);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(149, 24);
-			this->label6->TabIndex = 4;
-			this->label6->Text = L"Session Record:";
+			this->labelSessionRecord->Location = System::Drawing::Point(5, 176);
+			this->labelSessionRecord->Name = L"labelSessionRecord";
+			this->labelSessionRecord->Size = System::Drawing::Size(149, 24);
+			this->labelSessionRecord->TabIndex = 4;
+			this->labelSessionRecord->Text = L"Session Record:";
 			// 
 			// panel4
 			// 
@@ -838,8 +848,8 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 					this->columnHeader2
 			});
 			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem10,
-					listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18
+				listViewItem28,
+					listViewItem29, listViewItem30, listViewItem31, listViewItem32, listViewItem33, listViewItem34, listViewItem35, listViewItem36
 			});
 			this->listViewResolutions->Location = System::Drawing::Point(12, 34);
 			this->listViewResolutions->Name = L"listViewResolutions";
@@ -874,6 +884,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			// 
 			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel5->Controls->Add(this->buttonEditRecord);
 			this->panel5->Controls->Add(this->groupBox7);
 			this->panel5->Controls->Add(this->buttonTopicChange);
 			this->panel5->Controls->Add(this->buttonExit);
@@ -885,8 +896,20 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->panel5->Size = System::Drawing::Size(198, 220);
 			this->panel5->TabIndex = 6;
 			// 
+			// buttonEditRecord
+			// 
+			this->buttonEditRecord->Location = System::Drawing::Point(106, 166);
+			this->buttonEditRecord->Name = L"buttonEditRecord";
+			this->buttonEditRecord->Size = System::Drawing::Size(83, 23);
+			this->buttonEditRecord->TabIndex = 14;
+			this->buttonEditRecord->Text = L"Edit Record";
+			this->buttonEditRecord->UseVisualStyleBackColor = true;
+			this->buttonEditRecord->Click += gcnew System::EventHandler(this, &MainForm::buttonEditRecord_Click);
+			// 
 			// groupBox7
 			// 
+			this->groupBox7->Controls->Add(this->label5);
+			this->groupBox7->Controls->Add(this->comboBoxTimerHour);
 			this->groupBox7->Controls->Add(this->comboBoxTimerSec);
 			this->groupBox7->Controls->Add(this->label11);
 			this->groupBox7->Controls->Add(this->buttonTimerSet);
@@ -899,6 +922,33 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->groupBox7->TabStop = false;
 			this->groupBox7->Text = L"Timer";
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(161)));
+			this->label5->Location = System::Drawing::Point(53, 19);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(15, 19);
+			this->label5->TabIndex = 10;
+			this->label5->Text = L":";
+			// 
+			// comboBoxTimerHour
+			// 
+			this->comboBoxTimerHour->DropDownHeight = 60;
+			this->comboBoxTimerHour->FormattingEnabled = true;
+			this->comboBoxTimerHour->IntegralHeight = false;
+			this->comboBoxTimerHour->Items->AddRange(gcnew cli::array< System::Object^  >(10) {
+				L"0", L"1", L"2", L"3", L"4", L"5", L"6",
+					L"7", L"8", L"9"
+			});
+			this->comboBoxTimerHour->Location = System::Drawing::Point(9, 17);
+			this->comboBoxTimerHour->MaxDropDownItems = 4;
+			this->comboBoxTimerHour->Name = L"comboBoxTimerHour";
+			this->comboBoxTimerHour->Size = System::Drawing::Size(38, 21);
+			this->comboBoxTimerHour->TabIndex = 9;
+			this->comboBoxTimerHour->Text = L"hh";
+			// 
 			// comboBoxTimerSec
 			// 
 			this->comboBoxTimerSec->DropDownHeight = 60;
@@ -909,7 +959,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 				L"0", L"5", L"10", L"15", L"20", L"25",
 					L"30", L"35", L"40", L"45", L"50", L"55"
 			});
-			this->comboBoxTimerSec->Location = System::Drawing::Point(58, 29);
+			this->comboBoxTimerSec->Location = System::Drawing::Point(143, 17);
 			this->comboBoxTimerSec->Name = L"comboBoxTimerSec";
 			this->comboBoxTimerSec->Size = System::Drawing::Size(40, 21);
 			this->comboBoxTimerSec->TabIndex = 7;
@@ -920,7 +970,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->label11->Location = System::Drawing::Point(44, 31);
+			this->label11->Location = System::Drawing::Point(121, 19);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(15, 19);
 			this->label11->TabIndex = 8;
@@ -928,7 +978,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			// 
 			// buttonTimerSet
 			// 
-			this->buttonTimerSet->Location = System::Drawing::Point(108, 15);
+			this->buttonTimerSet->Location = System::Drawing::Point(14, 44);
 			this->buttonTimerSet->Name = L"buttonTimerSet";
 			this->buttonTimerSet->Size = System::Drawing::Size(75, 23);
 			this->buttonTimerSet->TabIndex = 1;
@@ -938,7 +988,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			// 
 			// buttonTimerPause
 			// 
-			this->buttonTimerPause->Location = System::Drawing::Point(108, 44);
+			this->buttonTimerPause->Location = System::Drawing::Point(98, 44);
 			this->buttonTimerPause->Name = L"buttonTimerPause";
 			this->buttonTimerPause->Size = System::Drawing::Size(75, 23);
 			this->buttonTimerPause->TabIndex = 2;
@@ -951,11 +1001,13 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->comboBoxTimerMin->DropDownHeight = 60;
 			this->comboBoxTimerMin->FormattingEnabled = true;
 			this->comboBoxTimerMin->IntegralHeight = false;
-			this->comboBoxTimerMin->Items->AddRange(gcnew cli::array< System::Object^  >(16) {
+			this->comboBoxTimerMin->Items->AddRange(gcnew cli::array< System::Object^  >(60) {
 				L"0", L"1", L"2", L"3", L"4", L"5", L"6",
-					L"7", L"8", L"9", L"10", L"11", L"12", L"13", L"14", L"15"
+					L"7", L"8", L"9", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24", L"25",
+					L"26", L"27", L"28", L"29", L"30", L"31", L"32", L"33", L"34", L"35", L"36", L"37", L"38", L"39", L"40", L"41", L"42", L"43",
+					L"44", L"45", L"46", L"47", L"48", L"49", L"50", L"51", L"52", L"53", L"54", L"55", L"56", L"57", L"58", L"59"
 			});
-			this->comboBoxTimerMin->Location = System::Drawing::Point(6, 29);
+			this->comboBoxTimerMin->Location = System::Drawing::Point(77, 17);
 			this->comboBoxTimerMin->MaxDropDownItems = 4;
 			this->comboBoxTimerMin->Name = L"comboBoxTimerMin";
 			this->comboBoxTimerMin->Size = System::Drawing::Size(38, 21);
@@ -994,7 +1046,7 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			// 
 			// buttonSaveRecord
 			// 
-			this->buttonSaveRecord->Location = System::Drawing::Point(56, 166);
+			this->buttonSaveRecord->Location = System::Drawing::Point(9, 166);
 			this->buttonSaveRecord->Name = L"buttonSaveRecord";
 			this->buttonSaveRecord->Size = System::Drawing::Size(83, 23);
 			this->buttonSaveRecord->TabIndex = 3;
@@ -1038,17 +1090,6 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->linkLabel1->Text = L"Dimitris Alexandridis";
 			this->linkLabel1->Click += gcnew System::EventHandler(this, &MainForm::linkLabel1_Click);
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(3, 3);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(86, 79);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 6;
-			this->pictureBox1->TabStop = false;
-			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1073,6 +1114,8 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->panel6->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->groupBox6->ResumeLayout(false);
@@ -1081,7 +1124,6 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
 			this->panel7->ResumeLayout(false);
-			this->panel6->ResumeLayout(false);
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox5->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
@@ -1090,7 +1132,6 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 			this->panel5->PerformLayout();
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1149,7 +1190,33 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 
 	private: System::Void buttonAddSpeaker_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Add speaker
-		this->listViewSpeakerList->Items[this->comboBoxPriorityNumToAdd->SelectedIndex]->SubItems[1]->Text = comboBoxCountryList->Text;
+		if (comboBoxCountryList->SelectedIndex != -1) {
+			if (comboBoxPriorityNumToAdd->SelectedIndex == -1) {
+				int i = 0;
+
+				while (i < 9) {
+					if (isSpeakerSlotOccupied[i] == 0) { break; }
+					i++;
+				}
+
+				this->listViewSpeakerList->Items[i]->SubItems[1]->Text = comboBoxCountryList->Text;
+				isSpeakerSlotOccupied[i] = 1;
+			}
+			else {
+				int i = 7;
+				while (i > this->comboBoxPriorityNumToAdd->SelectedIndex - 1) {
+					this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text = this->listViewSpeakerList->Items[i]->SubItems[1]->Text;
+					if (this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text != "") { isSpeakerSlotOccupied[i + 1] = 1; }
+					i--;
+				}
+				isSpeakerSlotOccupied[this->comboBoxPriorityNumToAdd->SelectedIndex] = 1;
+				this->listViewSpeakerList->Items[this->comboBoxPriorityNumToAdd->SelectedIndex]->SubItems[1]->Text = comboBoxCountryList->Text;
+			}
+			comboBoxPriorityNumToAdd->SelectedIndex = -1;
+			comboBoxPriorityNumToAdd->Text = "#";
+			comboBoxCountryList->SelectedIndex = -1;
+			comboBoxCountryList->Text = "Choose Country";
+		}
 	}
 
 
@@ -1159,9 +1226,11 @@ private: System::Windows::Forms::PictureBox^  pictureBox1;
 		int i = this->comboBoxPriorityNumToRemove->SelectedIndex;
 		while (i < 8) {
 			this->listViewSpeakerList->Items[i]->SubItems[1]->Text = this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text;
+			if (this->listViewSpeakerList->Items[i]->SubItems[1]->Text == "") { isSpeakerSlotOccupied[i] = 0; }
 			i++;
 		}
 		this->listViewSpeakerList->Items[8]->SubItems[1]->Text = "";
+		isSpeakerSlotOccupied[8] = 0;
 	}
 
 
@@ -1170,14 +1239,17 @@ private: System::Void buttonNextSpeaker_Click(System::Object^  sender, System::E
 
 	//Set labelCountrySpeaking to country 1
 	this->labelCountrySpeaking->Text = listViewSpeakerList->Items[0]->SubItems[1]->Text;
+	this->comboBoxCurrentSpeakerList->Text = listViewSpeakerList->Items[0]->SubItems[1]->Text;
 
 	//Move each speaker one place up
 	int i = 0;
 	while (i < 8) {
 		this->listViewSpeakerList->Items[i]->SubItems[1]->Text = this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text;
 		i++;
+		if (listViewSpeakerList->Items[i]->SubItems[1]->Text == "") { isSpeakerSlotOccupied[i] = 0; isSpeakerSlotOccupied[i-1] = 0; }
 	}
 	this->listViewSpeakerList->Items[8]->SubItems[1]->Text = "";
+	isSpeakerSlotOccupied[8] = 0;
 }
 
 private: System::Void buttonAddCurrentSpeaker_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1259,45 +1331,58 @@ private: System::Void buttonAddRecord_Click(System::Object^  sender, System::Eve
 		}
 	}
 	private: System::Void buttonTimerSet_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (comboBoxTimerMin->SelectedIndex > -1 && comboBoxTimerSec->SelectedIndex > -1) {
+		CountdownSec = 0;
+		CountdownMin = 0;
+		CountdownSec = 0;
+		if (comboBoxTimerMin->SelectedIndex > -1) {
 			CountdownMin = this->comboBoxTimerMin->SelectedIndex;
+		}
+		if (comboBoxTimerSec->SelectedIndex > -1) {
 			CountdownSec = 5 * this->comboBoxTimerSec->SelectedIndex;
-			if (CountdownMin < 10 && CountdownSec > 9) {
-				this->labelCountdown->Text = "0" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
+		}
+		if (comboBoxTimerHour->SelectedIndex > -1) {
+			CountdownHour = this->comboBoxTimerHour->SelectedIndex;
+		}
+		if (CountdownMin < 10 && CountdownSec > 9) {
+			this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + "0" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
 			}
 			else if (CountdownSec < 10 && CountdownMin > 9) {
-				this->labelCountdown->Text = Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
+				this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
 			}
 			else if (CountdownMin < 10 && CountdownSec < 10) {
-				this->labelCountdown->Text = "0" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
+				this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + "0" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
 			}
 			else {
-				this->labelCountdown->Text = Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
+				this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
 			}
 			this->timerCountdown->Enabled = 0;
 			this->buttonTimerPause->Text = "Start";
-		}
 
 	}
 	private: System::Void timerCountdown_Tick(System::Object^  sender, System::EventArgs^  e) {
+		if (CountdownHour < 1 && CountdownMin < 1 && CountdownSec < 1) {
+			this->labelCountdown->Text = "00:00:00";
+			this->buttonTimerPause->Text = "Start";
+			this->timerCountdown->Enabled = 0;
+			return;
+		}
 		CountdownSec--;
-		if (CountdownSec == -1 && CountdownMin != 0) {
+		if (CountdownSec == -1 && CountdownMin > -1) {
 			CountdownSec = 59;
 			CountdownMin--;
 		}
-		if (CountdownMin < 10 && CountdownSec > 9) {
-			this->labelCountdown->Text = "0" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
-		} else if (CountdownSec < 10 && CountdownMin > 9) {
-			this->labelCountdown->Text = Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
-		} else if (CountdownMin < 10 && CountdownSec < 10) {
-			this->labelCountdown->Text = "0" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
-		} else {
-			this->labelCountdown->Text = Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
+		if (CountdownMin == -1 && CountdownHour > 0) {
+			CountdownMin = 59;
+			CountdownHour--;
 		}
-		if (CountdownMin == 0 && CountdownSec == -1) {
-			this->labelCountdown->Text = "00:00";
-			this->buttonTimerPause->Text = "Start";
-			this->timerCountdown->Enabled = 0;
+		if (CountdownMin < 10 && CountdownSec > 9) {
+			this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + "0" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
+		} else if (CountdownSec < 10 && CountdownMin > 9) {
+			this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
+		} else if (CountdownMin < 10 && CountdownSec < 10) {
+			this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + "0" + Convert::ToString(CountdownMin) + ":" + "0" + Convert::ToString(CountdownSec);
+		} else {
+			this->labelCountdown->Text = "0" + Convert::ToString(CountdownHour) + ":" + Convert::ToString(CountdownMin) + ":" + Convert::ToString(CountdownSec);
 		}
 	}
 
@@ -1383,6 +1468,20 @@ private: System::Void MainForm_FormClosing(System::Object^  sender, System::Wind
 }
 private: System::Void linkLabel1_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::Diagnostics::Process::Start("https://github.com/adimitris");
+}
+private: System::Void buttonEditRecord_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (isRecordReadOnly) {
+		isRecordReadOnly = 0;
+		this->textBoxRecord->ReadOnly = 0;
+		this->buttonEditRecord->Text = "Lock Record";
+		this->labelSessionRecord->Text = "Session Record: (EDIT)";
+	}
+	else {
+		isRecordReadOnly = 1;
+		this->textBoxRecord->ReadOnly = 1;
+		this->buttonEditRecord->Text = "Edit Record";
+		this->labelSessionRecord->Text = "Session Record:";
+	}
 }
 };
 }
