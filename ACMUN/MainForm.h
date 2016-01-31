@@ -150,14 +150,14 @@ namespace ACMUN {
 	private: System::Windows::Forms::Label^  label11;
 	private: System::Windows::Forms::ComboBox^  comboBoxTimerMin;
 
-	private: System::Windows::Forms::Label^  labelLatestRecord;
 
 
-	private: System::Windows::Forms::Label^  label1;
+
+
 
 
 	private: System::Windows::Forms::Label^  labelCommitteeStatus;
-	private: System::Windows::Forms::Label^  labelTopic;
+
 	private: System::Windows::Forms::RichTextBox^  richTextBoxRecordToAdd;
 private: System::Windows::Forms::TextBox^  textBoxRecord;
 
@@ -175,8 +175,8 @@ private: System::Windows::Forms::Button^  buttonTopicChange;
 private: System::Windows::Forms::ComboBox^  comboBoxResNumToRemove;
 private: System::Windows::Forms::Timer^  timerCountdown;
 
-private: System::Windows::Forms::Panel^  panel7;
-private: System::Windows::Forms::Panel^  panel6;
+
+
 private: System::Windows::Forms::Label^  label4;
 private: System::Windows::Forms::LinkLabel^  linkLabel1;
 private: System::Windows::Forms::PictureBox^  pictureBox1;
@@ -185,6 +185,8 @@ private: System::Windows::Forms::Label^  labelCountdown;
 private: System::Windows::Forms::Label^  label5;
 private: System::Windows::Forms::ComboBox^  comboBoxTimerHour;
 private: System::Windows::Forms::Button^  buttonEditRecord;
+private: System::Windows::Forms::Label^  labelTopic;
+private: System::Windows::Forms::Panel^  panel7;
 
 
 
@@ -216,75 +218,59 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-			System::Windows::Forms::ListViewItem^  listViewItem19 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"1",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem20 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"2",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem21 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"3",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem22 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"4",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem23 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"5",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem24 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"6",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem25 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"7",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem26 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"8",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem27 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"9",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem28 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem29 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem30 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem31 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem32 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"",
-					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem33 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"",
-					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem34 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"",
-					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem35 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"",
-					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem36 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1));
@@ -292,8 +278,6 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->timerLocalTime = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->labelTopic = (gcnew System::Windows::Forms::Label());
 			this->labelCommitteeName = (gcnew System::Windows::Forms::Label());
 			this->labelTitle = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -315,13 +299,10 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->SpeakerName = (gcnew System::Windows::Forms::ColumnHeader());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->labelCountdown = (gcnew System::Windows::Forms::Label());
-			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->labelLatestRecord = (gcnew System::Windows::Forms::Label());
 			this->textBoxRecord = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonUpdateCommitteeStatus = (gcnew System::Windows::Forms::Button());
 			this->comboBoxCommitteeStatus = (gcnew System::Windows::Forms::ComboBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->labelCommitteeStatus = (gcnew System::Windows::Forms::Label());
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonAddRecord = (gcnew System::Windows::Forms::Button());
@@ -353,20 +334,21 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->timerCountdown = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			this->labelTopic = (gcnew System::Windows::Forms::Label());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			this->panel6->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox6->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->panel3->SuspendLayout();
-			this->panel7->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox5->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->groupBox7->SuspendLayout();
+			this->panel7->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// labelTime
@@ -397,14 +379,13 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel1->Controls->Add(this->pictureBox1);
-			this->panel1->Controls->Add(this->panel6);
 			this->panel1->Controls->Add(this->labelCommitteeName);
 			this->panel1->Controls->Add(this->labelTitle);
 			this->panel1->Controls->Add(this->labelTime);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1087, 118);
+			this->panel1->Size = System::Drawing::Size(1087, 78);
 			this->panel1->TabIndex = 2;
 			// 
 			// pictureBox1
@@ -413,38 +394,19 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(3, 3);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(86, 79);
+			this->pictureBox1->Size = System::Drawing::Size(76, 73);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 6;
 			this->pictureBox1->TabStop = false;
 			// 
-			// panel6
-			// 
-			this->panel6->Controls->Add(this->labelTopic);
-			this->panel6->Location = System::Drawing::Point(95, 78);
-			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(927, 37);
-			this->panel6->TabIndex = 16;
-			// 
-			// labelTopic
-			// 
-			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelTopic->Location = System::Drawing::Point(0, 0);
-			this->labelTopic->Name = L"labelTopic";
-			this->labelTopic->Size = System::Drawing::Size(927, 37);
-			this->labelTopic->TabIndex = 8;
-			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			// 
 			// labelCommitteeName
 			// 
 			this->labelCommitteeName->AutoSize = true;
-			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
 			this->labelCommitteeName->Location = System::Drawing::Point(95, 44);
 			this->labelCommitteeName->Name = L"labelCommitteeName";
-			this->labelCommitteeName->Size = System::Drawing::Size(224, 31);
+			this->labelCommitteeName->Size = System::Drawing::Size(209, 32);
 			this->labelCommitteeName->TabIndex = 3;
 			this->labelCommitteeName->Text = L"Committee Name";
 			// 
@@ -470,16 +432,16 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Controls->Add(this->listViewSpeakerList);
-			this->panel2->Location = System::Drawing::Point(0, 121);
+			this->panel2->Location = System::Drawing::Point(0, 143);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(195, 508);
+			this->panel2->Size = System::Drawing::Size(195, 486);
 			this->panel2->TabIndex = 3;
 			// 
 			// groupBox6
 			// 
 			this->groupBox6->Controls->Add(this->buttonAddCurrentSpeaker);
 			this->groupBox6->Controls->Add(this->comboBoxCurrentSpeakerList);
-			this->groupBox6->Location = System::Drawing::Point(3, 447);
+			this->groupBox6->Location = System::Drawing::Point(3, 425);
 			this->groupBox6->Name = L"groupBox6";
 			this->groupBox6->Size = System::Drawing::Size(182, 57);
 			this->groupBox6->TabIndex = 9;
@@ -532,7 +494,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			this->groupBox2->Controls->Add(this->buttonRemoveSpeaker);
 			this->groupBox2->Controls->Add(this->comboBoxPriorityNumToRemove);
-			this->groupBox2->Location = System::Drawing::Point(3, 389);
+			this->groupBox2->Location = System::Drawing::Point(3, 365);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(182, 57);
 			this->groupBox2->TabIndex = 6;
@@ -569,7 +531,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->groupBox1->Controls->Add(this->comboBoxPriorityNumToAdd);
 			this->groupBox1->Location = System::Drawing::Point(3, 277);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(182, 106);
+			this->groupBox1->Size = System::Drawing::Size(182, 82);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Add Speaker";
@@ -585,7 +547,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonAddSpeaker
 			// 
-			this->buttonAddSpeaker->Location = System::Drawing::Point(33, 59);
+			this->buttonAddSpeaker->Location = System::Drawing::Point(33, 50);
 			this->buttonAddSpeaker->Name = L"buttonAddSpeaker";
 			this->buttonAddSpeaker->Size = System::Drawing::Size(99, 23);
 			this->buttonAddSpeaker->TabIndex = 4;
@@ -609,11 +571,11 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cambria", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->label3->Location = System::Drawing::Point(42, 5);
+			this->label3->Location = System::Drawing::Point(44, 3);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(102, 17);
+			this->label3->Size = System::Drawing::Size(111, 19);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Now Speaking:";
 			// 
@@ -624,8 +586,8 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 					this->SpeakerName
 			});
 			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem19,
-					listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24, listViewItem25, listViewItem26, listViewItem27
+				listViewItem1,
+					listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9
 			});
 			this->listViewSpeakerList->Location = System::Drawing::Point(3, 51);
 			this->listViewSpeakerList->Name = L"listViewSpeakerList";
@@ -649,64 +611,44 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
 			this->panel3->Controls->Add(this->labelCountdown);
-			this->panel3->Controls->Add(this->panel7);
 			this->panel3->Controls->Add(this->textBoxRecord);
 			this->panel3->Controls->Add(this->groupBox3);
-			this->panel3->Controls->Add(this->label1);
 			this->panel3->Controls->Add(this->labelCommitteeStatus);
 			this->panel3->Controls->Add(this->groupBox5);
 			this->panel3->Controls->Add(this->labelSessionRecord);
-			this->panel3->Location = System::Drawing::Point(201, 121);
+			this->panel3->Location = System::Drawing::Point(201, 143);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(682, 508);
+			this->panel3->Size = System::Drawing::Size(682, 486);
 			this->panel3->TabIndex = 4;
 			// 
 			// labelCountdown
 			// 
 			this->labelCountdown->AutoSize = true;
-			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Cambria", 39.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->labelCountdown->Location = System::Drawing::Point(266, 66);
+			this->labelCountdown->Location = System::Drawing::Point(224, 54);
 			this->labelCountdown->Name = L"labelCountdown";
-			this->labelCountdown->Size = System::Drawing::Size(151, 39);
+			this->labelCountdown->Size = System::Drawing::Size(229, 62);
 			this->labelCountdown->TabIndex = 4;
 			this->labelCountdown->Text = L"00:00:00";
-			// 
-			// panel7
-			// 
-			this->panel7->Controls->Add(this->labelLatestRecord);
-			this->panel7->Location = System::Drawing::Point(220, 119);
-			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(453, 68);
-			this->panel7->TabIndex = 17;
-			// 
-			// labelLatestRecord
-			// 
-			this->labelLatestRecord->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->labelLatestRecord->Font = (gcnew System::Drawing::Font(L"Calibri", 12.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelLatestRecord->Location = System::Drawing::Point(0, 0);
-			this->labelLatestRecord->Name = L"labelLatestRecord";
-			this->labelLatestRecord->Size = System::Drawing::Size(453, 68);
-			this->labelLatestRecord->TabIndex = 11;
 			// 
 			// textBoxRecord
 			// 
 			this->textBoxRecord->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->textBoxRecord->Location = System::Drawing::Point(9, 203);
+			this->textBoxRecord->Location = System::Drawing::Point(9, 145);
 			this->textBoxRecord->Multiline = true;
 			this->textBoxRecord->Name = L"textBoxRecord";
 			this->textBoxRecord->ReadOnly = true;
 			this->textBoxRecord->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBoxRecord->Size = System::Drawing::Size(664, 186);
+			this->textBoxRecord->Size = System::Drawing::Size(664, 234);
 			this->textBoxRecord->TabIndex = 15;
 			// 
 			// groupBox3
 			// 
 			this->groupBox3->Controls->Add(this->buttonUpdateCommitteeStatus);
 			this->groupBox3->Controls->Add(this->comboBoxCommitteeStatus);
-			this->groupBox3->Location = System::Drawing::Point(9, 395);
+			this->groupBox3->Location = System::Drawing::Point(7, 384);
 			this->groupBox3->Name = L"groupBox3";
 			this->groupBox3->Size = System::Drawing::Size(160, 53);
 			this->groupBox3->TabIndex = 14;
@@ -731,17 +673,6 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->comboBoxCommitteeStatus->Size = System::Drawing::Size(111, 21);
 			this->comboBoxCommitteeStatus->TabIndex = 0;
 			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->label1->Location = System::Drawing::Point(3, 119);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(219, 24);
-			this->label1->TabIndex = 10;
-			this->label1->Text = L"Latest Announcement:";
-			// 
 			// labelCommitteeStatus
 			// 
 			this->labelCommitteeStatus->Font = (gcnew System::Drawing::Font(L"Cambria", 32, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -757,16 +688,16 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			this->groupBox5->Controls->Add(this->buttonAddRecord);
 			this->groupBox5->Controls->Add(this->richTextBoxRecordToAdd);
-			this->groupBox5->Location = System::Drawing::Point(175, 395);
+			this->groupBox5->Location = System::Drawing::Point(169, 385);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(504, 104);
+			this->groupBox5->Size = System::Drawing::Size(504, 97);
 			this->groupBox5->TabIndex = 7;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Add Record";
 			// 
 			// buttonAddRecord
 			// 
-			this->buttonAddRecord->Location = System::Drawing::Point(423, 74);
+			this->buttonAddRecord->Location = System::Drawing::Point(409, 68);
 			this->buttonAddRecord->Name = L"buttonAddRecord";
 			this->buttonAddRecord->Size = System::Drawing::Size(75, 23);
 			this->buttonAddRecord->TabIndex = 1;
@@ -779,18 +710,18 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->richTextBoxRecordToAdd->EnableAutoDragDrop = true;
 			this->richTextBoxRecordToAdd->Location = System::Drawing::Point(6, 20);
 			this->richTextBoxRecordToAdd->Name = L"richTextBoxRecordToAdd";
-			this->richTextBoxRecordToAdd->Size = System::Drawing::Size(492, 48);
+			this->richTextBoxRecordToAdd->Size = System::Drawing::Size(492, 43);
 			this->richTextBoxRecordToAdd->TabIndex = 0;
 			this->richTextBoxRecordToAdd->Text = L"";
 			// 
 			// labelSessionRecord
 			// 
 			this->labelSessionRecord->AutoSize = true;
-			this->labelSessionRecord->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelSessionRecord->Font = (gcnew System::Drawing::Font(L"Cambria", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(161)));
-			this->labelSessionRecord->Location = System::Drawing::Point(5, 176);
+			this->labelSessionRecord->Location = System::Drawing::Point(3, 118);
 			this->labelSessionRecord->Name = L"labelSessionRecord";
-			this->labelSessionRecord->Size = System::Drawing::Size(149, 24);
+			this->labelSessionRecord->Size = System::Drawing::Size(137, 22);
 			this->labelSessionRecord->TabIndex = 4;
 			this->labelSessionRecord->Text = L"Session Record:";
 			// 
@@ -803,9 +734,9 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->panel4->Controls->Add(this->buttonAddResolution);
 			this->panel4->Controls->Add(this->listViewResolutions);
 			this->panel4->Controls->Add(this->label8);
-			this->panel4->Location = System::Drawing::Point(889, 121);
+			this->panel4->Location = System::Drawing::Point(889, 143);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(198, 282);
+			this->panel4->Size = System::Drawing::Size(198, 260);
 			this->panel4->TabIndex = 5;
 			// 
 			// comboBoxResNumToRemove
@@ -815,7 +746,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 				L"1", L"2", L"3", L"4", L"5", L"6",
 					L"7", L"8"
 			});
-			this->comboBoxResNumToRemove->Location = System::Drawing::Point(151, 253);
+			this->comboBoxResNumToRemove->Location = System::Drawing::Point(151, 218);
 			this->comboBoxResNumToRemove->Name = L"comboBoxResNumToRemove";
 			this->comboBoxResNumToRemove->Size = System::Drawing::Size(35, 21);
 			this->comboBoxResNumToRemove->TabIndex = 12;
@@ -823,7 +754,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonRemoveResolution
 			// 
-			this->buttonRemoveResolution->Location = System::Drawing::Point(12, 253);
+			this->buttonRemoveResolution->Location = System::Drawing::Point(8, 218);
 			this->buttonRemoveResolution->Name = L"buttonRemoveResolution";
 			this->buttonRemoveResolution->Size = System::Drawing::Size(137, 23);
 			this->buttonRemoveResolution->TabIndex = 10;
@@ -833,7 +764,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonAddResolution
 			// 
-			this->buttonAddResolution->Location = System::Drawing::Point(12, 224);
+			this->buttonAddResolution->Location = System::Drawing::Point(12, 187);
 			this->buttonAddResolution->Name = L"buttonAddResolution";
 			this->buttonAddResolution->Size = System::Drawing::Size(174, 23);
 			this->buttonAddResolution->TabIndex = 11;
@@ -847,13 +778,13 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 				this->columnHeader1,
 					this->columnHeader2
 			});
-			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem28,
-					listViewItem29, listViewItem30, listViewItem31, listViewItem32, listViewItem33, listViewItem34, listViewItem35, listViewItem36
+			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(5) {
+				listViewItem10,
+					listViewItem11, listViewItem12, listViewItem13, listViewItem14
 			});
 			this->listViewResolutions->Location = System::Drawing::Point(12, 34);
 			this->listViewResolutions->Name = L"listViewResolutions";
-			this->listViewResolutions->Size = System::Drawing::Size(174, 184);
+			this->listViewResolutions->Size = System::Drawing::Size(174, 147);
 			this->listViewResolutions->TabIndex = 1;
 			this->listViewResolutions->UseCompatibleStateImageBehavior = false;
 			this->listViewResolutions->View = System::Windows::Forms::View::Details;
@@ -898,7 +829,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonEditRecord
 			// 
-			this->buttonEditRecord->Location = System::Drawing::Point(106, 166);
+			this->buttonEditRecord->Location = System::Drawing::Point(106, 159);
 			this->buttonEditRecord->Name = L"buttonEditRecord";
 			this->buttonEditRecord->Size = System::Drawing::Size(83, 23);
 			this->buttonEditRecord->TabIndex = 14;
@@ -1026,7 +957,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonExit
 			// 
-			this->buttonExit->Location = System::Drawing::Point(56, 193);
+			this->buttonExit->Location = System::Drawing::Point(56, 188);
 			this->buttonExit->Name = L"buttonExit";
 			this->buttonExit->Size = System::Drawing::Size(83, 23);
 			this->buttonExit->TabIndex = 5;
@@ -1036,7 +967,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonCrisis
 			// 
-			this->buttonCrisis->Location = System::Drawing::Point(56, 137);
+			this->buttonCrisis->Location = System::Drawing::Point(56, 133);
 			this->buttonCrisis->Name = L"buttonCrisis";
 			this->buttonCrisis->Size = System::Drawing::Size(83, 23);
 			this->buttonCrisis->TabIndex = 4;
@@ -1046,7 +977,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			// 
 			// buttonSaveRecord
 			// 
-			this->buttonSaveRecord->Location = System::Drawing::Point(9, 166);
+			this->buttonSaveRecord->Location = System::Drawing::Point(9, 159);
 			this->buttonSaveRecord->Name = L"buttonSaveRecord";
 			this->buttonSaveRecord->Size = System::Drawing::Size(83, 23);
 			this->buttonSaveRecord->TabIndex = 3;
@@ -1090,6 +1021,27 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->linkLabel1->Text = L"Dimitris Alexandridis";
 			this->linkLabel1->Click += gcnew System::EventHandler(this, &MainForm::linkLabel1_Click);
 			// 
+			// labelTopic
+			// 
+			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Cambria", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(161)));
+			this->labelTopic->Location = System::Drawing::Point(0, 0);
+			this->labelTopic->Name = L"labelTopic";
+			this->labelTopic->Size = System::Drawing::Size(1084, 54);
+			this->labelTopic->TabIndex = 8;
+			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// panel7
+			// 
+			this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel7->Controls->Add(this->labelTopic);
+			this->panel7->Location = System::Drawing::Point(3, 83);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(1084, 54);
+			this->panel7->TabIndex = 9;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1098,6 +1050,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->ClientSize = System::Drawing::Size(1087, 643);
+			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->label4);
@@ -1115,7 +1068,6 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			this->panel6->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->groupBox6->ResumeLayout(false);
@@ -1123,7 +1075,6 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->groupBox1->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			this->panel7->ResumeLayout(false);
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox5->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
@@ -1132,6 +1083,7 @@ private: System::Windows::Forms::Button^  buttonEditRecord;
 			this->panel5->PerformLayout();
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
+			this->panel7->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1293,15 +1245,15 @@ private: System::Void buttonUpdateCommitteeStatus_Click(System::Object^  sender,
 private: System::Void buttonAddRecord_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	if (this->textBoxRecord->Text->Length == 0) {
-		this->textBoxRecord->AppendText("-");
+		this->textBoxRecord->AppendText(DateTime::Now.ToString("HH:mm:ss") + "-");
 		this->textBoxRecord->AppendText(richTextBoxRecordToAdd->Text);
-		this->labelLatestRecord->Text = richTextBoxRecordToAdd->Text;
+		//this->labelLatestRecord->Text = richTextBoxRecordToAdd->Text;
 		this->richTextBoxRecordToAdd->Text = "";
 	}
 	else {
-		this->labelLatestRecord->Text = richTextBoxRecordToAdd->Text;
+		//this->labelLatestRecord->Text = richTextBoxRecordToAdd->Text;
 		this->textBoxRecord->AppendText("\r\n\r\n");
-		this->textBoxRecord->AppendText("-");
+		this->textBoxRecord->AppendText(DateTime::Now.ToString("HH:mm:ss") + "-");
 		this->textBoxRecord->AppendText(richTextBoxRecordToAdd->Text);
 		this->richTextBoxRecordToAdd->Text = "";
 	}
