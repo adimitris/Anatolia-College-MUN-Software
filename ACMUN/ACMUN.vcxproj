@@ -104,6 +104,9 @@
     <EmbeddedResource Include="ChangeTopic.resx">
       <DependentUpon>ChangeTopic.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>

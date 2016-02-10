@@ -39,7 +39,7 @@ namespace ACMUN {
 	int CountdownMin = 0;
 	int CountdownSec = 0;
 	int CountdownHour = 0;
-	bool isSpeakerSlotOccupied[9] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	bool isSpeakerSlotOccupied[25] = { 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 	bool isRecordReadOnly = 1;
 
 
@@ -82,7 +82,7 @@ namespace ACMUN {
 	private: System::Windows::Forms::ComboBox^  comboBoxCountryList;
 
 	private: System::Windows::Forms::Button^  buttonAddSpeaker;
-	private: System::Windows::Forms::ComboBox^  comboBoxPriorityNumToAdd;
+	private: System::Windows::Forms::ComboBox^  comboBoxPriorityNum;
 
 
 
@@ -92,10 +92,10 @@ namespace ACMUN {
 
 	private: System::Windows::Forms::ColumnHeader^  priorityNum;
 	private: System::Windows::Forms::ColumnHeader^  SpeakerName;
-	private: System::Windows::Forms::GroupBox^  groupBox2;
+
 	private: System::Windows::Forms::Button^  buttonRemoveSpeaker;
 
-	private: System::Windows::Forms::ComboBox^  comboBoxPriorityNumToRemove;
+
 
 	private: System::Windows::Forms::Button^  buttonNextSpeaker;
 
@@ -187,6 +187,7 @@ private: System::Windows::Forms::ComboBox^  comboBoxTimerHour;
 private: System::Windows::Forms::Button^  buttonEditRecord;
 private: System::Windows::Forms::Label^  labelTopic;
 private: System::Windows::Forms::Panel^  panel7;
+private: System::Windows::Forms::Panel^  panel6;
 
 
 
@@ -218,62 +219,156 @@ private: System::Windows::Forms::Panel^  panel7;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem61 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"1",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem62 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"2",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem63 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"3",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem64 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"4",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem65 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"5",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem66 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"6",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem67 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"7",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem68 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"8",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem69 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"9",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem70 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"10",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem71 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"11",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem72 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"12",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem73 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"13",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem74 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"14",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem75 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"15",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem76 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"16",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem77 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"17",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem78 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"18",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem79 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"19",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem80 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"20",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem81 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"21",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem82 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"22",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem83 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"23",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem84 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"24",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem85 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+				L"25",
+					L""
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem86 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem87 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem88 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem89 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
-			}, -1));
-			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
+			System::Windows::Forms::ListViewItem^  listViewItem90 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
-			}, -1));
+			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
+			14.25F))));
 			this->labelTime = (gcnew System::Windows::Forms::Label());
 			this->timerLocalTime = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -286,27 +381,25 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->comboBoxCurrentSpeakerList = (gcnew System::Windows::Forms::ComboBox());
 			this->labelCountrySpeaking = (gcnew System::Windows::Forms::Label());
 			this->buttonNextSpeaker = (gcnew System::Windows::Forms::Button());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->buttonRemoveSpeaker = (gcnew System::Windows::Forms::Button());
-			this->comboBoxPriorityNumToRemove = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->buttonRemoveSpeaker = (gcnew System::Windows::Forms::Button());
 			this->comboBoxCountryList = (gcnew System::Windows::Forms::ComboBox());
 			this->buttonAddSpeaker = (gcnew System::Windows::Forms::Button());
-			this->comboBoxPriorityNumToAdd = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBoxPriorityNum = (gcnew System::Windows::Forms::ComboBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->listViewSpeakerList = (gcnew System::Windows::Forms::ListView());
 			this->priorityNum = (gcnew System::Windows::Forms::ColumnHeader());
 			this->SpeakerName = (gcnew System::Windows::Forms::ColumnHeader());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->labelCountdown = (gcnew System::Windows::Forms::Label());
-			this->textBoxRecord = (gcnew System::Windows::Forms::TextBox());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->buttonUpdateCommitteeStatus = (gcnew System::Windows::Forms::Button());
-			this->comboBoxCommitteeStatus = (gcnew System::Windows::Forms::ComboBox());
-			this->labelCommitteeStatus = (gcnew System::Windows::Forms::Label());
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonAddRecord = (gcnew System::Windows::Forms::Button());
 			this->richTextBoxRecordToAdd = (gcnew System::Windows::Forms::RichTextBox());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->buttonUpdateCommitteeStatus = (gcnew System::Windows::Forms::Button());
+			this->comboBoxCommitteeStatus = (gcnew System::Windows::Forms::ComboBox());
+			this->labelCountdown = (gcnew System::Windows::Forms::Label());
+			this->textBoxRecord = (gcnew System::Windows::Forms::TextBox());
+			this->labelCommitteeStatus = (gcnew System::Windows::Forms::Label());
 			this->labelSessionRecord = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->comboBoxResNumToRemove = (gcnew System::Windows::Forms::ComboBox());
@@ -336,30 +429,30 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->labelTopic = (gcnew System::Windows::Forms::Label());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
 			this->groupBox6->SuspendLayout();
-			this->groupBox2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->panel3->SuspendLayout();
-			this->groupBox3->SuspendLayout();
 			this->groupBox5->SuspendLayout();
+			this->groupBox3->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->groupBox7->SuspendLayout();
 			this->panel7->SuspendLayout();
+			this->panel6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// labelTime
 			// 
-			this->labelTime->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->labelTime->AutoSize = true;
 			this->labelTime->BackColor = System::Drawing::Color::Transparent;
-			this->labelTime->Font = (gcnew System::Drawing::Font(L"Cambria", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelTime->ForeColor = System::Drawing::Color::Black;
-			this->labelTime->Location = System::Drawing::Point(848, 9);
+			this->labelTime->Dock = System::Windows::Forms::DockStyle::Right;
+			this->labelTime->Font = (gcnew System::Drawing::Font(L"Cambria", 14));
+			this->labelTime->ForeColor = System::Drawing::Color::White;
+			this->labelTime->Location = System::Drawing::Point(768, 0);
 			this->labelTime->Margin = System::Windows::Forms::Padding(0);
 			this->labelTime->Name = L"labelTime";
 			this->labelTime->Size = System::Drawing::Size(230, 22);
@@ -374,18 +467,18 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// panel1
 			// 
-			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel1->AutoSize = true;
+			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->labelCommitteeName);
 			this->panel1->Controls->Add(this->labelTitle);
 			this->panel1->Controls->Add(this->labelTime);
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1087, 78);
+			this->panel1->Size = System::Drawing::Size(998, 79);
 			this->panel1->TabIndex = 2;
 			// 
 			// pictureBox1
@@ -402,8 +495,8 @@ private: System::Windows::Forms::Panel^  panel7;
 			// labelCommitteeName
 			// 
 			this->labelCommitteeName->AutoSize = true;
-			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Italic));
+			this->labelCommitteeName->ForeColor = System::Drawing::Color::White;
 			this->labelCommitteeName->Location = System::Drawing::Point(95, 44);
 			this->labelCommitteeName->Name = L"labelCommitteeName";
 			this->labelCommitteeName->Size = System::Drawing::Size(209, 32);
@@ -413,8 +506,8 @@ private: System::Windows::Forms::Panel^  panel7;
 			// labelTitle
 			// 
 			this->labelTitle->AutoSize = true;
-			this->labelTitle->Font = (gcnew System::Drawing::Font(L"Cambria", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->labelTitle->Font = (gcnew System::Drawing::Font(L"Cambria", 24));
+			this->labelTitle->ForeColor = System::Drawing::Color::White;
 			this->labelTitle->Location = System::Drawing::Point(94, 7);
 			this->labelTitle->Name = L"labelTitle";
 			this->labelTitle->Size = System::Drawing::Size(548, 37);
@@ -423,34 +516,38 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// panel2
 			// 
-			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left));
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->panel2->Controls->Add(this->groupBox6);
 			this->panel2->Controls->Add(this->labelCountrySpeaking);
 			this->panel2->Controls->Add(this->buttonNextSpeaker);
-			this->panel2->Controls->Add(this->groupBox2);
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Controls->Add(this->listViewSpeakerList);
 			this->panel2->Location = System::Drawing::Point(0, 143);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(195, 486);
+			this->panel2->Size = System::Drawing::Size(211, 463);
 			this->panel2->TabIndex = 3;
 			// 
 			// groupBox6
 			// 
+			this->groupBox6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->groupBox6->Controls->Add(this->buttonAddCurrentSpeaker);
 			this->groupBox6->Controls->Add(this->comboBoxCurrentSpeakerList);
-			this->groupBox6->Location = System::Drawing::Point(3, 425);
+			this->groupBox6->ForeColor = System::Drawing::Color::White;
+			this->groupBox6->Location = System::Drawing::Point(3, 408);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Size = System::Drawing::Size(182, 57);
+			this->groupBox6->Size = System::Drawing::Size(204, 50);
 			this->groupBox6->TabIndex = 9;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Current Speaker";
 			// 
 			// buttonAddCurrentSpeaker
 			// 
-			this->buttonAddCurrentSpeaker->Location = System::Drawing::Point(139, 19);
+			this->buttonAddCurrentSpeaker->ForeColor = System::Drawing::Color::Black;
+			this->buttonAddCurrentSpeaker->Location = System::Drawing::Point(161, 17);
 			this->buttonAddCurrentSpeaker->Name = L"buttonAddCurrentSpeaker";
 			this->buttonAddCurrentSpeaker->Size = System::Drawing::Size(37, 23);
 			this->buttonAddCurrentSpeaker->TabIndex = 1;
@@ -465,133 +562,120 @@ private: System::Windows::Forms::Panel^  panel7;
 				L"Chair", L"Co-Chair", L"China",
 					L"France", L"Germany", L"UNHCR"
 			});
-			this->comboBoxCurrentSpeakerList->Location = System::Drawing::Point(6, 19);
+			this->comboBoxCurrentSpeakerList->Location = System::Drawing::Point(5, 19);
 			this->comboBoxCurrentSpeakerList->Name = L"comboBoxCurrentSpeakerList";
-			this->comboBoxCurrentSpeakerList->Size = System::Drawing::Size(126, 21);
+			this->comboBoxCurrentSpeakerList->Size = System::Drawing::Size(147, 21);
 			this->comboBoxCurrentSpeakerList->TabIndex = 0;
 			// 
 			// labelCountrySpeaking
 			// 
-			this->labelCountrySpeaking->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(161)));
-			this->labelCountrySpeaking->Location = System::Drawing::Point(3, 22);
+			this->labelCountrySpeaking->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold));
+			this->labelCountrySpeaking->ForeColor = System::Drawing::Color::White;
+			this->labelCountrySpeaking->Location = System::Drawing::Point(0, 23);
 			this->labelCountrySpeaking->Name = L"labelCountrySpeaking";
-			this->labelCountrySpeaking->Size = System::Drawing::Size(182, 26);
+			this->labelCountrySpeaking->Size = System::Drawing::Size(208, 35);
 			this->labelCountrySpeaking->TabIndex = 8;
 			this->labelCountrySpeaking->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// buttonNextSpeaker
 			// 
-			this->buttonNextSpeaker->Location = System::Drawing::Point(36, 242);
+			this->buttonNextSpeaker->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->buttonNextSpeaker->Location = System::Drawing::Point(47, 303);
 			this->buttonNextSpeaker->Name = L"buttonNextSpeaker";
-			this->buttonNextSpeaker->Size = System::Drawing::Size(108, 29);
+			this->buttonNextSpeaker->Size = System::Drawing::Size(108, 30);
 			this->buttonNextSpeaker->TabIndex = 7;
 			this->buttonNextSpeaker->Text = L"Next Speaker";
 			this->buttonNextSpeaker->UseVisualStyleBackColor = true;
 			this->buttonNextSpeaker->Click += gcnew System::EventHandler(this, &MainForm::buttonNextSpeaker_Click);
 			// 
-			// groupBox2
+			// groupBox1
 			// 
-			this->groupBox2->Controls->Add(this->buttonRemoveSpeaker);
-			this->groupBox2->Controls->Add(this->comboBoxPriorityNumToRemove);
-			this->groupBox2->Location = System::Drawing::Point(3, 365);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(182, 57);
-			this->groupBox2->TabIndex = 6;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Remove Speaker";
+			this->groupBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->groupBox1->Controls->Add(this->buttonRemoveSpeaker);
+			this->groupBox1->Controls->Add(this->comboBoxCountryList);
+			this->groupBox1->Controls->Add(this->buttonAddSpeaker);
+			this->groupBox1->Controls->Add(this->comboBoxPriorityNum);
+			this->groupBox1->ForeColor = System::Drawing::Color::White;
+			this->groupBox1->Location = System::Drawing::Point(3, 334);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(204, 73);
+			this->groupBox1->TabIndex = 5;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Speaker List";
 			// 
 			// buttonRemoveSpeaker
 			// 
-			this->buttonRemoveSpeaker->Location = System::Drawing::Point(66, 19);
+			this->buttonRemoveSpeaker->ForeColor = System::Drawing::Color::Black;
+			this->buttonRemoveSpeaker->Location = System::Drawing::Point(113, 45);
 			this->buttonRemoveSpeaker->Name = L"buttonRemoveSpeaker";
-			this->buttonRemoveSpeaker->Size = System::Drawing::Size(86, 23);
+			this->buttonRemoveSpeaker->Size = System::Drawing::Size(70, 23);
 			this->buttonRemoveSpeaker->TabIndex = 1;
 			this->buttonRemoveSpeaker->Text = L"Remove";
 			this->buttonRemoveSpeaker->UseVisualStyleBackColor = true;
 			this->buttonRemoveSpeaker->Click += gcnew System::EventHandler(this, &MainForm::buttonRemoveSpeaker_Click);
 			// 
-			// comboBoxPriorityNumToRemove
-			// 
-			this->comboBoxPriorityNumToRemove->FormattingEnabled = true;
-			this->comboBoxPriorityNumToRemove->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
-				L"1", L"2", L"3", L"4", L"5",
-					L"6", L"7", L"8", L"9"
-			});
-			this->comboBoxPriorityNumToRemove->Location = System::Drawing::Point(9, 19);
-			this->comboBoxPriorityNumToRemove->Name = L"comboBoxPriorityNumToRemove";
-			this->comboBoxPriorityNumToRemove->Size = System::Drawing::Size(41, 21);
-			this->comboBoxPriorityNumToRemove->TabIndex = 0;
-			this->comboBoxPriorityNumToRemove->Text = L"#";
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->comboBoxCountryList);
-			this->groupBox1->Controls->Add(this->buttonAddSpeaker);
-			this->groupBox1->Controls->Add(this->comboBoxPriorityNumToAdd);
-			this->groupBox1->Location = System::Drawing::Point(3, 277);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(182, 82);
-			this->groupBox1->TabIndex = 5;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Add Speaker";
-			// 
 			// comboBoxCountryList
 			// 
 			this->comboBoxCountryList->FormattingEnabled = true;
-			this->comboBoxCountryList->Location = System::Drawing::Point(6, 23);
+			this->comboBoxCountryList->Location = System::Drawing::Point(6, 19);
 			this->comboBoxCountryList->Name = L"comboBoxCountryList";
-			this->comboBoxCountryList->Size = System::Drawing::Size(111, 21);
+			this->comboBoxCountryList->Size = System::Drawing::Size(136, 21);
 			this->comboBoxCountryList->TabIndex = 2;
 			this->comboBoxCountryList->Text = L"Choose Country";
 			// 
 			// buttonAddSpeaker
 			// 
-			this->buttonAddSpeaker->Location = System::Drawing::Point(33, 50);
+			this->buttonAddSpeaker->ForeColor = System::Drawing::Color::Black;
+			this->buttonAddSpeaker->Location = System::Drawing::Point(24, 46);
 			this->buttonAddSpeaker->Name = L"buttonAddSpeaker";
-			this->buttonAddSpeaker->Size = System::Drawing::Size(99, 23);
+			this->buttonAddSpeaker->Size = System::Drawing::Size(71, 23);
 			this->buttonAddSpeaker->TabIndex = 4;
-			this->buttonAddSpeaker->Text = L"Add Speaker";
+			this->buttonAddSpeaker->Text = L"Add";
 			this->buttonAddSpeaker->UseVisualStyleBackColor = true;
 			this->buttonAddSpeaker->Click += gcnew System::EventHandler(this, &MainForm::buttonAddSpeaker_Click);
 			// 
-			// comboBoxPriorityNumToAdd
+			// comboBoxPriorityNum
 			// 
-			this->comboBoxPriorityNumToAdd->FormattingEnabled = true;
-			this->comboBoxPriorityNumToAdd->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
-				L"1", L"2", L"3", L"4", L"5", L"6",
-					L"7", L"8", L"9"
+			this->comboBoxPriorityNum->FormattingEnabled = true;
+			this->comboBoxPriorityNum->Items->AddRange(gcnew cli::array< System::Object^  >(25) {
+				L"1", L"2", L"3", L"4", L"5", L"6", L"7",
+					L"8", L"9", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24", L"25"
 			});
-			this->comboBoxPriorityNumToAdd->Location = System::Drawing::Point(123, 23);
-			this->comboBoxPriorityNumToAdd->Name = L"comboBoxPriorityNumToAdd";
-			this->comboBoxPriorityNumToAdd->Size = System::Drawing::Size(50, 21);
-			this->comboBoxPriorityNumToAdd->TabIndex = 3;
-			this->comboBoxPriorityNumToAdd->Text = L"#";
+			this->comboBoxPriorityNum->Location = System::Drawing::Point(148, 19);
+			this->comboBoxPriorityNum->Name = L"comboBoxPriorityNum";
+			this->comboBoxPriorityNum->Size = System::Drawing::Size(50, 21);
+			this->comboBoxPriorityNum->TabIndex = 3;
+			this->comboBoxPriorityNum->Text = L"#";
 			// 
 			// label3
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Cambria", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->label3->Location = System::Drawing::Point(44, 3);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F));
+			this->label3->ForeColor = System::Drawing::Color::White;
+			this->label3->Location = System::Drawing::Point(3, -1);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(111, 19);
+			this->label3->Size = System::Drawing::Size(205, 27);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Now Speaking:";
+			this->label3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// listViewSpeakerList
 			// 
+			this->listViewSpeakerList->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left));
 			this->listViewSpeakerList->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(2) {
 				this->priorityNum,
 					this->SpeakerName
 			});
-			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(9) {
-				listViewItem1,
-					listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9
+			this->listViewSpeakerList->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F));
+			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(25) {
+				listViewItem61,
+					listViewItem62, listViewItem63, listViewItem64, listViewItem65, listViewItem66, listViewItem67, listViewItem68, listViewItem69,
+					listViewItem70, listViewItem71, listViewItem72, listViewItem73, listViewItem74, listViewItem75, listViewItem76, listViewItem77,
+					listViewItem78, listViewItem79, listViewItem80, listViewItem81, listViewItem82, listViewItem83, listViewItem84, listViewItem85
 			});
-			this->listViewSpeakerList->Location = System::Drawing::Point(3, 51);
+			this->listViewSpeakerList->Location = System::Drawing::Point(-6, 61);
 			this->listViewSpeakerList->Name = L"listViewSpeakerList";
-			this->listViewSpeakerList->Size = System::Drawing::Size(182, 185);
+			this->listViewSpeakerList->Size = System::Drawing::Size(214, 236);
 			this->listViewSpeakerList->TabIndex = 0;
 			this->listViewSpeakerList->UseCompatibleStateImageBehavior = false;
 			this->listViewSpeakerList->View = System::Windows::Forms::View::Details;
@@ -599,56 +683,74 @@ private: System::Windows::Forms::Panel^  panel7;
 			// priorityNum
 			// 
 			this->priorityNum->Text = L"#";
-			this->priorityNum->Width = 20;
+			this->priorityNum->Width = 28;
 			// 
 			// SpeakerName
 			// 
 			this->SpeakerName->Text = L"Speaker";
 			this->SpeakerName->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->SpeakerName->Width = 155;
+			this->SpeakerName->Width = 165;
 			// 
 			// panel3
 			// 
+			this->panel3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
+			this->panel3->Controls->Add(this->groupBox5);
+			this->panel3->Controls->Add(this->groupBox3);
 			this->panel3->Controls->Add(this->labelCountdown);
 			this->panel3->Controls->Add(this->textBoxRecord);
-			this->panel3->Controls->Add(this->groupBox3);
 			this->panel3->Controls->Add(this->labelCommitteeStatus);
-			this->panel3->Controls->Add(this->groupBox5);
 			this->panel3->Controls->Add(this->labelSessionRecord);
-			this->panel3->Location = System::Drawing::Point(201, 143);
+			this->panel3->Location = System::Drawing::Point(213, 143);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(682, 486);
+			this->panel3->Size = System::Drawing::Size(569, 463);
 			this->panel3->TabIndex = 4;
 			// 
-			// labelCountdown
+			// groupBox5
 			// 
-			this->labelCountdown->AutoSize = true;
-			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Cambria", 39.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelCountdown->Location = System::Drawing::Point(224, 54);
-			this->labelCountdown->Name = L"labelCountdown";
-			this->labelCountdown->Size = System::Drawing::Size(229, 62);
-			this->labelCountdown->TabIndex = 4;
-			this->labelCountdown->Text = L"00:00:00";
+			this->groupBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupBox5->Controls->Add(this->buttonAddRecord);
+			this->groupBox5->Controls->Add(this->richTextBoxRecordToAdd);
+			this->groupBox5->ForeColor = System::Drawing::Color::Black;
+			this->groupBox5->Location = System::Drawing::Point(173, 351);
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->Size = System::Drawing::Size(390, 97);
+			this->groupBox5->TabIndex = 7;
+			this->groupBox5->TabStop = false;
+			this->groupBox5->Text = L"Add Record";
 			// 
-			// textBoxRecord
+			// buttonAddRecord
 			// 
-			this->textBoxRecord->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->textBoxRecord->Location = System::Drawing::Point(9, 145);
-			this->textBoxRecord->Multiline = true;
-			this->textBoxRecord->Name = L"textBoxRecord";
-			this->textBoxRecord->ReadOnly = true;
-			this->textBoxRecord->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBoxRecord->Size = System::Drawing::Size(664, 234);
-			this->textBoxRecord->TabIndex = 15;
+			this->buttonAddRecord->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->buttonAddRecord->Location = System::Drawing::Point(297, 68);
+			this->buttonAddRecord->Name = L"buttonAddRecord";
+			this->buttonAddRecord->Size = System::Drawing::Size(75, 23);
+			this->buttonAddRecord->TabIndex = 1;
+			this->buttonAddRecord->Text = L"Add";
+			this->buttonAddRecord->UseVisualStyleBackColor = true;
+			this->buttonAddRecord->Click += gcnew System::EventHandler(this, &MainForm::buttonAddRecord_Click);
+			// 
+			// richTextBoxRecordToAdd
+			// 
+			this->richTextBoxRecordToAdd->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->richTextBoxRecordToAdd->EnableAutoDragDrop = true;
+			this->richTextBoxRecordToAdd->Location = System::Drawing::Point(6, 20);
+			this->richTextBoxRecordToAdd->Name = L"richTextBoxRecordToAdd";
+			this->richTextBoxRecordToAdd->Size = System::Drawing::Size(378, 43);
+			this->richTextBoxRecordToAdd->TabIndex = 0;
+			this->richTextBoxRecordToAdd->Text = L"";
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->groupBox3->Controls->Add(this->buttonUpdateCommitteeStatus);
 			this->groupBox3->Controls->Add(this->comboBoxCommitteeStatus);
-			this->groupBox3->Location = System::Drawing::Point(7, 384);
+			this->groupBox3->ForeColor = System::Drawing::Color::Black;
+			this->groupBox3->Location = System::Drawing::Point(7, 351);
 			this->groupBox3->Name = L"groupBox3";
 			this->groupBox3->Size = System::Drawing::Size(160, 53);
 			this->groupBox3->TabIndex = 14;
@@ -673,80 +775,80 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->comboBoxCommitteeStatus->Size = System::Drawing::Size(111, 21);
 			this->comboBoxCommitteeStatus->TabIndex = 0;
 			// 
+			// labelCountdown
+			// 
+			this->labelCountdown->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->labelCountdown->Font = (gcnew System::Drawing::Font(L"Calibri", 39.75F));
+			this->labelCountdown->Location = System::Drawing::Point(7, 59);
+			this->labelCountdown->Name = L"labelCountdown";
+			this->labelCountdown->Size = System::Drawing::Size(556, 59);
+			this->labelCountdown->TabIndex = 4;
+			this->labelCountdown->Text = L"00:00:00";
+			this->labelCountdown->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// textBoxRecord
+			// 
+			this->textBoxRecord->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBoxRecord->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
+			this->textBoxRecord->Location = System::Drawing::Point(7, 144);
+			this->textBoxRecord->Multiline = true;
+			this->textBoxRecord->Name = L"textBoxRecord";
+			this->textBoxRecord->ReadOnly = true;
+			this->textBoxRecord->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->textBoxRecord->Size = System::Drawing::Size(556, 201);
+			this->textBoxRecord->TabIndex = 15;
+			// 
 			// labelCommitteeStatus
 			// 
-			this->labelCommitteeStatus->Font = (gcnew System::Drawing::Font(L"Cambria", 32, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelCommitteeStatus->Location = System::Drawing::Point(9, 5);
+			this->labelCommitteeStatus->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->labelCommitteeStatus->Font = (gcnew System::Drawing::Font(L"Calibri", 36));
+			this->labelCommitteeStatus->Location = System::Drawing::Point(4, 5);
 			this->labelCommitteeStatus->Name = L"labelCommitteeStatus";
-			this->labelCommitteeStatus->Size = System::Drawing::Size(664, 49);
+			this->labelCommitteeStatus->Size = System::Drawing::Size(563, 56);
 			this->labelCommitteeStatus->TabIndex = 9;
 			this->labelCommitteeStatus->Text = L"Lobbying";
 			this->labelCommitteeStatus->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
-			// groupBox5
-			// 
-			this->groupBox5->Controls->Add(this->buttonAddRecord);
-			this->groupBox5->Controls->Add(this->richTextBoxRecordToAdd);
-			this->groupBox5->Location = System::Drawing::Point(169, 385);
-			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(504, 97);
-			this->groupBox5->TabIndex = 7;
-			this->groupBox5->TabStop = false;
-			this->groupBox5->Text = L"Add Record";
-			// 
-			// buttonAddRecord
-			// 
-			this->buttonAddRecord->Location = System::Drawing::Point(409, 68);
-			this->buttonAddRecord->Name = L"buttonAddRecord";
-			this->buttonAddRecord->Size = System::Drawing::Size(75, 23);
-			this->buttonAddRecord->TabIndex = 1;
-			this->buttonAddRecord->Text = L"Add";
-			this->buttonAddRecord->UseVisualStyleBackColor = true;
-			this->buttonAddRecord->Click += gcnew System::EventHandler(this, &MainForm::buttonAddRecord_Click);
-			// 
-			// richTextBoxRecordToAdd
-			// 
-			this->richTextBoxRecordToAdd->EnableAutoDragDrop = true;
-			this->richTextBoxRecordToAdd->Location = System::Drawing::Point(6, 20);
-			this->richTextBoxRecordToAdd->Name = L"richTextBoxRecordToAdd";
-			this->richTextBoxRecordToAdd->Size = System::Drawing::Size(492, 43);
-			this->richTextBoxRecordToAdd->TabIndex = 0;
-			this->richTextBoxRecordToAdd->Text = L"";
-			// 
 			// labelSessionRecord
 			// 
 			this->labelSessionRecord->AutoSize = true;
-			this->labelSessionRecord->Font = (gcnew System::Drawing::Font(L"Cambria", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->labelSessionRecord->Location = System::Drawing::Point(3, 118);
+			this->labelSessionRecord->Font = (gcnew System::Drawing::Font(L"Calibri", 18));
+			this->labelSessionRecord->Location = System::Drawing::Point(4, 112);
 			this->labelSessionRecord->Name = L"labelSessionRecord";
-			this->labelSessionRecord->Size = System::Drawing::Size(137, 22);
+			this->labelSessionRecord->Size = System::Drawing::Size(166, 29);
 			this->labelSessionRecord->TabIndex = 4;
 			this->labelSessionRecord->Text = L"Session Record:";
 			// 
 			// panel4
 			// 
-			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->panel4->Controls->Add(this->comboBoxResNumToRemove);
 			this->panel4->Controls->Add(this->buttonRemoveResolution);
 			this->panel4->Controls->Add(this->buttonAddResolution);
 			this->panel4->Controls->Add(this->listViewResolutions);
 			this->panel4->Controls->Add(this->label8);
-			this->panel4->Location = System::Drawing::Point(889, 143);
+			this->panel4->Location = System::Drawing::Point(785, 143);
+			this->panel4->Margin = System::Windows::Forms::Padding(0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(198, 260);
+			this->panel4->Size = System::Drawing::Size(213, 239);
 			this->panel4->TabIndex = 5;
 			// 
 			// comboBoxResNumToRemove
 			// 
+			this->comboBoxResNumToRemove->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->comboBoxResNumToRemove->FormattingEnabled = true;
 			this->comboBoxResNumToRemove->Items->AddRange(gcnew cli::array< System::Object^  >(8) {
 				L"1", L"2", L"3", L"4", L"5", L"6",
 					L"7", L"8"
 			});
-			this->comboBoxResNumToRemove->Location = System::Drawing::Point(151, 218);
+			this->comboBoxResNumToRemove->Location = System::Drawing::Point(160, 211);
 			this->comboBoxResNumToRemove->Name = L"comboBoxResNumToRemove";
 			this->comboBoxResNumToRemove->Size = System::Drawing::Size(35, 21);
 			this->comboBoxResNumToRemove->TabIndex = 12;
@@ -754,7 +856,8 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonRemoveResolution
 			// 
-			this->buttonRemoveResolution->Location = System::Drawing::Point(8, 218);
+			this->buttonRemoveResolution->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
+			this->buttonRemoveResolution->Location = System::Drawing::Point(14, 210);
 			this->buttonRemoveResolution->Name = L"buttonRemoveResolution";
 			this->buttonRemoveResolution->Size = System::Drawing::Size(137, 23);
 			this->buttonRemoveResolution->TabIndex = 10;
@@ -764,9 +867,10 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonAddResolution
 			// 
-			this->buttonAddResolution->Location = System::Drawing::Point(12, 187);
+			this->buttonAddResolution->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
+			this->buttonAddResolution->Location = System::Drawing::Point(14, 181);
 			this->buttonAddResolution->Name = L"buttonAddResolution";
-			this->buttonAddResolution->Size = System::Drawing::Size(174, 23);
+			this->buttonAddResolution->Size = System::Drawing::Size(181, 23);
 			this->buttonAddResolution->TabIndex = 11;
 			this->buttonAddResolution->Text = L"Add Draft Resolution";
 			this->buttonAddResolution->UseVisualStyleBackColor = true;
@@ -774,17 +878,20 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// listViewResolutions
 			// 
+			this->listViewResolutions->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left));
 			this->listViewResolutions->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(2) {
 				this->columnHeader1,
 					this->columnHeader2
 			});
+			this->listViewResolutions->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F));
 			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(5) {
-				listViewItem10,
-					listViewItem11, listViewItem12, listViewItem13, listViewItem14
+				listViewItem86,
+					listViewItem87, listViewItem88, listViewItem89, listViewItem90
 			});
-			this->listViewResolutions->Location = System::Drawing::Point(12, 34);
+			this->listViewResolutions->Location = System::Drawing::Point(3, 34);
 			this->listViewResolutions->Name = L"listViewResolutions";
-			this->listViewResolutions->Size = System::Drawing::Size(174, 147);
+			this->listViewResolutions->Size = System::Drawing::Size(210, 138);
 			this->listViewResolutions->TabIndex = 1;
 			this->listViewResolutions->UseCompatibleStateImageBehavior = false;
 			this->listViewResolutions->View = System::Windows::Forms::View::Details;
@@ -798,23 +905,24 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			this->columnHeader2->Text = L"Submitter";
 			this->columnHeader2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->columnHeader2->Width = 148;
+			this->columnHeader2->Width = 167;
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Cambria", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->label8->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F));
+			this->label8->ForeColor = System::Drawing::Color::White;
 			this->label8->Location = System::Drawing::Point(25, 5);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(146, 22);
+			this->label8->Size = System::Drawing::Size(154, 26);
 			this->label8->TabIndex = 0;
 			this->label8->Text = L"Resolution Panel";
 			// 
 			// panel5
 			// 
-			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->panel5->Controls->Add(this->buttonEditRecord);
 			this->panel5->Controls->Add(this->groupBox7);
 			this->panel5->Controls->Add(this->buttonTopicChange);
@@ -822,14 +930,15 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->panel5->Controls->Add(this->buttonCrisis);
 			this->panel5->Controls->Add(this->buttonSaveRecord);
 			this->panel5->Controls->Add(this->label9);
-			this->panel5->Location = System::Drawing::Point(889, 409);
+			this->panel5->Location = System::Drawing::Point(785, 387);
+			this->panel5->Margin = System::Windows::Forms::Padding(0);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(198, 220);
+			this->panel5->Size = System::Drawing::Size(213, 219);
 			this->panel5->TabIndex = 6;
 			// 
 			// buttonEditRecord
 			// 
-			this->buttonEditRecord->Location = System::Drawing::Point(106, 159);
+			this->buttonEditRecord->Location = System::Drawing::Point(113, 160);
 			this->buttonEditRecord->Name = L"buttonEditRecord";
 			this->buttonEditRecord->Size = System::Drawing::Size(83, 23);
 			this->buttonEditRecord->TabIndex = 14;
@@ -846,7 +955,8 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->groupBox7->Controls->Add(this->buttonTimerSet);
 			this->groupBox7->Controls->Add(this->buttonTimerPause);
 			this->groupBox7->Controls->Add(this->comboBoxTimerMin);
-			this->groupBox7->Location = System::Drawing::Point(3, 26);
+			this->groupBox7->ForeColor = System::Drawing::Color::White;
+			this->groupBox7->Location = System::Drawing::Point(10, 27);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(192, 77);
 			this->groupBox7->TabIndex = 9;
@@ -856,8 +966,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold));
 			this->label5->Location = System::Drawing::Point(53, 19);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(15, 19);
@@ -899,8 +1008,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold));
 			this->label11->Location = System::Drawing::Point(121, 19);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(15, 19);
@@ -909,16 +1017,18 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonTimerSet
 			// 
+			this->buttonTimerSet->ForeColor = System::Drawing::Color::Black;
 			this->buttonTimerSet->Location = System::Drawing::Point(14, 44);
 			this->buttonTimerSet->Name = L"buttonTimerSet";
 			this->buttonTimerSet->Size = System::Drawing::Size(75, 23);
 			this->buttonTimerSet->TabIndex = 1;
-			this->buttonTimerSet->Text = L"Reset";
+			this->buttonTimerSet->Text = L"Set";
 			this->buttonTimerSet->UseVisualStyleBackColor = true;
 			this->buttonTimerSet->Click += gcnew System::EventHandler(this, &MainForm::buttonTimerSet_Click);
 			// 
 			// buttonTimerPause
 			// 
+			this->buttonTimerPause->ForeColor = System::Drawing::Color::Black;
 			this->buttonTimerPause->Location = System::Drawing::Point(98, 44);
 			this->buttonTimerPause->Name = L"buttonTimerPause";
 			this->buttonTimerPause->Size = System::Drawing::Size(75, 23);
@@ -947,7 +1057,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonTopicChange
 			// 
-			this->buttonTopicChange->Location = System::Drawing::Point(56, 107);
+			this->buttonTopicChange->Location = System::Drawing::Point(63, 108);
 			this->buttonTopicChange->Name = L"buttonTopicChange";
 			this->buttonTopicChange->Size = System::Drawing::Size(83, 23);
 			this->buttonTopicChange->TabIndex = 13;
@@ -957,7 +1067,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonExit
 			// 
-			this->buttonExit->Location = System::Drawing::Point(56, 188);
+			this->buttonExit->Location = System::Drawing::Point(63, 189);
 			this->buttonExit->Name = L"buttonExit";
 			this->buttonExit->Size = System::Drawing::Size(83, 23);
 			this->buttonExit->TabIndex = 5;
@@ -967,7 +1077,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonCrisis
 			// 
-			this->buttonCrisis->Location = System::Drawing::Point(56, 133);
+			this->buttonCrisis->Location = System::Drawing::Point(63, 134);
 			this->buttonCrisis->Name = L"buttonCrisis";
 			this->buttonCrisis->Size = System::Drawing::Size(83, 23);
 			this->buttonCrisis->TabIndex = 4;
@@ -977,7 +1087,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// buttonSaveRecord
 			// 
-			this->buttonSaveRecord->Location = System::Drawing::Point(9, 159);
+			this->buttonSaveRecord->Location = System::Drawing::Point(16, 160);
 			this->buttonSaveRecord->Name = L"buttonSaveRecord";
 			this->buttonSaveRecord->Size = System::Drawing::Size(83, 23);
 			this->buttonSaveRecord->TabIndex = 3;
@@ -988,11 +1098,11 @@ private: System::Windows::Forms::Panel^  panel7;
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
-			this->label9->Location = System::Drawing::Point(60, 5);
+			this->label9->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F));
+			this->label9->ForeColor = System::Drawing::Color::White;
+			this->label9->Location = System::Drawing::Point(65, 4);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(79, 24);
+			this->label9->Size = System::Drawing::Size(83, 26);
 			this->label9->TabIndex = 0;
 			this->label9->Text = L"Controls";
 			// 
@@ -1004,7 +1114,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(0, 630);
+			this->label4->Location = System::Drawing::Point(3, 1);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(58, 13);
 			this->label4->TabIndex = 7;
@@ -1013,7 +1123,7 @@ private: System::Windows::Forms::Panel^  panel7;
 			// linkLabel1
 			// 
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(56, 630);
+			this->linkLabel1->Location = System::Drawing::Point(59, 1);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(99, 13);
 			this->linkLabel1->TabIndex = 8;
@@ -1023,45 +1133,61 @@ private: System::Windows::Forms::Panel^  panel7;
 			// 
 			// labelTopic
 			// 
+			this->labelTopic->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Cambria", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(161)));
+			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold));
+			this->labelTopic->ForeColor = System::Drawing::Color::White;
 			this->labelTopic->Location = System::Drawing::Point(0, 0);
 			this->labelTopic->Name = L"labelTopic";
-			this->labelTopic->Size = System::Drawing::Size(1084, 54);
+			this->labelTopic->Size = System::Drawing::Size(998, 54);
 			this->labelTopic->TabIndex = 8;
 			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// panel7
 			// 
+			this->panel7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel7->AutoSize = true;
 			this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->panel7->Controls->Add(this->labelTopic);
-			this->panel7->Location = System::Drawing::Point(3, 83);
+			this->panel7->Location = System::Drawing::Point(0, 83);
+			this->panel7->Margin = System::Windows::Forms::Padding(1);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(1084, 54);
+			this->panel7->Size = System::Drawing::Size(998, 54);
 			this->panel7->TabIndex = 9;
+			// 
+			// panel6
+			// 
+			this->panel6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel6->Controls->Add(this->label4);
+			this->panel6->Controls->Add(this->linkLabel1);
+			this->panel6->Location = System::Drawing::Point(-1, 609);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(999, 18);
+			this->panel6->TabIndex = 16;
 			// 
 			// MainForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->AutoSize = true;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->ClientSize = System::Drawing::Size(1087, 643);
-			this->Controls->Add(this->panel7);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->linkLabel1);
-			this->Controls->Add(this->label4);
+			this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(135)));
+			this->ClientSize = System::Drawing::Size(998, 627);
 			this->Controls->Add(this->panel5);
-			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panel7);
+			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel1);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Controls->Add(this->panel6);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MaximizeBox = false;
 			this->Name = L"MainForm";
+			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Show;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"ACMUN";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
@@ -1069,14 +1195,12 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
 			this->groupBox6->ResumeLayout(false);
-			this->groupBox2->ResumeLayout(false);
 			this->groupBox1->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
 			this->groupBox5->ResumeLayout(false);
+			this->groupBox3->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
 			this->panel5->ResumeLayout(false);
@@ -1084,6 +1208,8 @@ private: System::Windows::Forms::Panel^  panel7;
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
 			this->panel7->ResumeLayout(false);
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1143,10 +1269,10 @@ private: System::Windows::Forms::Panel^  panel7;
 	private: System::Void buttonAddSpeaker_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Add speaker
 		if (comboBoxCountryList->SelectedIndex != -1) {
-			if (comboBoxPriorityNumToAdd->SelectedIndex == -1) {
+			if (comboBoxPriorityNum->SelectedIndex == -1) {
 				int i = 0;
 
-				while (i < 9) {
+				while (i < 25) {
 					if (isSpeakerSlotOccupied[i] == 0) { break; }
 					i++;
 				}
@@ -1155,17 +1281,17 @@ private: System::Windows::Forms::Panel^  panel7;
 				isSpeakerSlotOccupied[i] = 1;
 			}
 			else {
-				int i = 7;
-				while (i > this->comboBoxPriorityNumToAdd->SelectedIndex - 1) {
+				int i = 23;
+				while (i > this->comboBoxPriorityNum->SelectedIndex - 1) {
 					this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text = this->listViewSpeakerList->Items[i]->SubItems[1]->Text;
 					if (this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text != "") { isSpeakerSlotOccupied[i + 1] = 1; }
 					i--;
 				}
-				isSpeakerSlotOccupied[this->comboBoxPriorityNumToAdd->SelectedIndex] = 1;
-				this->listViewSpeakerList->Items[this->comboBoxPriorityNumToAdd->SelectedIndex]->SubItems[1]->Text = comboBoxCountryList->Text;
+				isSpeakerSlotOccupied[this->comboBoxPriorityNum->SelectedIndex] = 1;
+				this->listViewSpeakerList->Items[this->comboBoxPriorityNum->SelectedIndex]->SubItems[1]->Text = comboBoxCountryList->Text;
 			}
-			comboBoxPriorityNumToAdd->SelectedIndex = -1;
-			comboBoxPriorityNumToAdd->Text = "#";
+			comboBoxPriorityNum->SelectedIndex = -1;
+			comboBoxPriorityNum->Text = "#";
 			comboBoxCountryList->SelectedIndex = -1;
 			comboBoxCountryList->Text = "Choose Country";
 		}
@@ -1174,15 +1300,21 @@ private: System::Windows::Forms::Panel^  panel7;
 
 
 	private: System::Void buttonRemoveSpeaker_Click(System::Object^  sender, System::EventArgs^  e) {
-		//Remove Speaker
-		int i = this->comboBoxPriorityNumToRemove->SelectedIndex;
-		while (i < 8) {
-			this->listViewSpeakerList->Items[i]->SubItems[1]->Text = this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text;
-			if (this->listViewSpeakerList->Items[i]->SubItems[1]->Text == "") { isSpeakerSlotOccupied[i] = 0; }
-			i++;
+		if (comboBoxPriorityNum->SelectedIndex != -1) {
+			//Remove Speaker
+			int i = this->comboBoxPriorityNum->SelectedIndex;
+			while (i < 24) {
+				this->listViewSpeakerList->Items[i]->SubItems[1]->Text = this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text;
+				if (this->listViewSpeakerList->Items[i]->SubItems[1]->Text == "") { isSpeakerSlotOccupied[i] = 0; }
+				i++;
+			}
+			this->listViewSpeakerList->Items[24]->SubItems[1]->Text = "";
+			isSpeakerSlotOccupied[24] = 0;
+			comboBoxPriorityNum->SelectedIndex = -1;
+			comboBoxPriorityNum->Text = "#";
+			comboBoxCountryList->SelectedIndex = -1;
+			comboBoxCountryList->Text = "Choose Country";
 		}
-		this->listViewSpeakerList->Items[8]->SubItems[1]->Text = "";
-		isSpeakerSlotOccupied[8] = 0;
 	}
 
 
@@ -1195,13 +1327,13 @@ private: System::Void buttonNextSpeaker_Click(System::Object^  sender, System::E
 
 	//Move each speaker one place up
 	int i = 0;
-	while (i < 8) {
+	while (i < 24) {
 		this->listViewSpeakerList->Items[i]->SubItems[1]->Text = this->listViewSpeakerList->Items[i + 1]->SubItems[1]->Text;
 		i++;
 		if (listViewSpeakerList->Items[i]->SubItems[1]->Text == "") { isSpeakerSlotOccupied[i] = 0; isSpeakerSlotOccupied[i-1] = 0; }
 	}
-	this->listViewSpeakerList->Items[8]->SubItems[1]->Text = "";
-	isSpeakerSlotOccupied[8] = 0;
+	this->listViewSpeakerList->Items[24]->SubItems[1]->Text = "";
+	isSpeakerSlotOccupied[24] = 0;
 }
 
 private: System::Void buttonAddCurrentSpeaker_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1271,15 +1403,17 @@ private: System::Void buttonAddRecord_Click(System::Object^  sender, System::Eve
 
 
 	private: System::Void buttonRemoveResolution_Click(System::Object^  sender, System::EventArgs^  e) {
-		int i = this->comboBoxResNumToRemove->SelectedIndex;
-		if (i < ResCount) {
-			while (i < ResCount - 1) {
-				this->listViewResolutions->Items[i]->SubItems[1]->Text = this->listViewResolutions->Items[i + 1]->SubItems[1]->Text;
-				i++;
+		if (comboBoxResNumToRemove->SelectedIndex != -1) {
+			int i = this->comboBoxResNumToRemove->SelectedIndex;
+			if (i < ResCount) {
+				while (i < ResCount - 1) {
+					this->listViewResolutions->Items[i]->SubItems[1]->Text = this->listViewResolutions->Items[i + 1]->SubItems[1]->Text;
+					i++;
+				}
+				this->listViewResolutions->Items[ResCount - 1]->SubItems[0]->Text = "";
+				this->listViewResolutions->Items[ResCount - 1]->SubItems[1]->Text = "";
+				ResCount--;
 			}
-			this->listViewResolutions->Items[ResCount - 1]->SubItems[0]->Text = "";
-			this->listViewResolutions->Items[ResCount - 1]->SubItems[1]->Text = "";
-			ResCount--;
 		}
 	}
 	private: System::Void buttonTimerSet_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1402,8 +1536,17 @@ private: System::Void buttonCrisis_Click(System::Object^  sender, System::EventA
 	CrisisDialog->Show();
 	CrisisDialog->labelCommitteeName->Text = this->labelCommitteeName->Text + ": CRISIS";
 	CrisisDialog->buttonCrisis->Enabled = false;
+	CrisisDialog->BackColor = System::Drawing::Color::FromArgb(196, 51, 44);
+	//CrisisDialog->BackColor = System::Drawing::Color::FromArgb(255, 148, 141);
 	CrisisDialog->buttonCrisis->Text = "";
-
+	CrisisDialog->labelCommitteeStatus->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->labelCountdown->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->labelSessionRecord->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->groupBox3->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->groupBox5->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->label4->ForeColor = System::Drawing::Color::White;
+	CrisisDialog->buttonAddRecord->ForeColor = System::Drawing::Color::Black;
+	CrisisDialog->buttonUpdateCommitteeStatus->ForeColor = System::Drawing::Color::Black;
 }
 
 private: System::Void MainForm_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^ e) {
