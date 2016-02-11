@@ -219,152 +219,152 @@ private: System::Windows::Forms::Panel^  panel6;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-			System::Windows::Forms::ListViewItem^  listViewItem61 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"1",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem62 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"2",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem63 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem3 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"3",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem64 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem4 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"4",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem65 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem5 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"5",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem66 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem6 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"6",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem67 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem7 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"7",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem68 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem8 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"8",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem69 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem9 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"9",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem70 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem10 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"10",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem71 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem11 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"11",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem72 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem12 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"12",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem73 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem13 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"13",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem74 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem14 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"14",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem75 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem15 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"15",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem76 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem16 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"16",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem77 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem17 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"17",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem78 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem18 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"18",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem79 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem19 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"19",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem80 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem20 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"20",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem81 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem21 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"21",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem82 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem22 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"22",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem83 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem23 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"23",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem84 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem24 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"24",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem85 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem25 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"25",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem86 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem26 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem87 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem27 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem88 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem28 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem89 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem29 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
 			14.25F))));
-			System::Windows::Forms::ListViewItem^  listViewItem90 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
+			System::Windows::Forms::ListViewItem^  listViewItem30 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
 				L"",
 					L""
 			}, -1, System::Drawing::SystemColors::WindowText, System::Drawing::SystemColors::Window, (gcnew System::Drawing::Font(L"Calibri",
@@ -478,14 +478,14 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(998, 79);
+			this->panel1->Size = System::Drawing::Size(998, 77);
 			this->panel1->TabIndex = 2;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(3, 3);
+			this->pictureBox1->Location = System::Drawing::Point(3, 1);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(76, 73);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -497,7 +497,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->labelCommitteeName->AutoSize = true;
 			this->labelCommitteeName->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Italic));
 			this->labelCommitteeName->ForeColor = System::Drawing::Color::White;
-			this->labelCommitteeName->Location = System::Drawing::Point(95, 44);
+			this->labelCommitteeName->Location = System::Drawing::Point(95, 40);
 			this->labelCommitteeName->Name = L"labelCommitteeName";
 			this->labelCommitteeName->Size = System::Drawing::Size(209, 32);
 			this->labelCommitteeName->TabIndex = 3;
@@ -508,7 +508,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->labelTitle->AutoSize = true;
 			this->labelTitle->Font = (gcnew System::Drawing::Font(L"Cambria", 24));
 			this->labelTitle->ForeColor = System::Drawing::Color::White;
-			this->labelTitle->Location = System::Drawing::Point(94, 7);
+			this->labelTitle->Location = System::Drawing::Point(94, 1);
 			this->labelTitle->Name = L"labelTitle";
 			this->labelTitle->Size = System::Drawing::Size(548, 37);
 			this->labelTitle->TabIndex = 2;
@@ -526,7 +526,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Controls->Add(this->listViewSpeakerList);
-			this->panel2->Location = System::Drawing::Point(0, 143);
+			this->panel2->Location = System::Drawing::Point(0, 149);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(211, 463);
 			this->panel2->TabIndex = 3;
@@ -668,10 +668,10 @@ private: System::Windows::Forms::Panel^  panel6;
 			});
 			this->listViewSpeakerList->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F));
 			this->listViewSpeakerList->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(25) {
-				listViewItem61,
-					listViewItem62, listViewItem63, listViewItem64, listViewItem65, listViewItem66, listViewItem67, listViewItem68, listViewItem69,
-					listViewItem70, listViewItem71, listViewItem72, listViewItem73, listViewItem74, listViewItem75, listViewItem76, listViewItem77,
-					listViewItem78, listViewItem79, listViewItem80, listViewItem81, listViewItem82, listViewItem83, listViewItem84, listViewItem85
+				listViewItem1,
+					listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9, listViewItem10,
+					listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18,
+					listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24, listViewItem25
 			});
 			this->listViewSpeakerList->Location = System::Drawing::Point(-6, 61);
 			this->listViewSpeakerList->Name = L"listViewSpeakerList";
@@ -703,7 +703,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel3->Controls->Add(this->textBoxRecord);
 			this->panel3->Controls->Add(this->labelCommitteeStatus);
 			this->panel3->Controls->Add(this->labelSessionRecord);
-			this->panel3->Location = System::Drawing::Point(213, 143);
+			this->panel3->Location = System::Drawing::Point(213, 149);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(569, 463);
 			this->panel3->TabIndex = 4;
@@ -834,7 +834,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel4->Controls->Add(this->buttonAddResolution);
 			this->panel4->Controls->Add(this->listViewResolutions);
 			this->panel4->Controls->Add(this->label8);
-			this->panel4->Location = System::Drawing::Point(785, 143);
+			this->panel4->Location = System::Drawing::Point(785, 149);
 			this->panel4->Margin = System::Windows::Forms::Padding(0);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(213, 239);
@@ -886,8 +886,8 @@ private: System::Windows::Forms::Panel^  panel6;
 			});
 			this->listViewResolutions->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F));
 			this->listViewResolutions->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(5) {
-				listViewItem86,
-					listViewItem87, listViewItem88, listViewItem89, listViewItem90
+				listViewItem26,
+					listViewItem27, listViewItem28, listViewItem29, listViewItem30
 			});
 			this->listViewResolutions->Location = System::Drawing::Point(3, 34);
 			this->listViewResolutions->Name = L"listViewResolutions";
@@ -930,7 +930,7 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel5->Controls->Add(this->buttonCrisis);
 			this->panel5->Controls->Add(this->buttonSaveRecord);
 			this->panel5->Controls->Add(this->label9);
-			this->panel5->Location = System::Drawing::Point(785, 387);
+			this->panel5->Location = System::Drawing::Point(785, 393);
 			this->panel5->Margin = System::Windows::Forms::Padding(0);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(213, 219);
@@ -1136,11 +1136,12 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->labelTopic->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
 				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->labelTopic->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold));
+			this->labelTopic->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(161)));
 			this->labelTopic->ForeColor = System::Drawing::Color::White;
 			this->labelTopic->Location = System::Drawing::Point(0, 0);
 			this->labelTopic->Name = L"labelTopic";
-			this->labelTopic->Size = System::Drawing::Size(998, 54);
+			this->labelTopic->Size = System::Drawing::Size(998, 66);
 			this->labelTopic->TabIndex = 8;
 			this->labelTopic->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
@@ -1149,13 +1150,13 @@ private: System::Windows::Forms::Panel^  panel6;
 			this->panel7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel7->AutoSize = true;
-			this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(166)), static_cast<System::Int32>(static_cast<System::Byte>(166)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(125)));
 			this->panel7->Controls->Add(this->labelTopic);
-			this->panel7->Location = System::Drawing::Point(0, 83);
+			this->panel7->Location = System::Drawing::Point(0, 80);
 			this->panel7->Margin = System::Windows::Forms::Padding(1);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(998, 54);
+			this->panel7->Size = System::Drawing::Size(998, 66);
 			this->panel7->TabIndex = 9;
 			// 
 			// panel6
@@ -1164,7 +1165,7 @@ private: System::Windows::Forms::Panel^  panel6;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel6->Controls->Add(this->label4);
 			this->panel6->Controls->Add(this->linkLabel1);
-			this->panel6->Location = System::Drawing::Point(-1, 609);
+			this->panel6->Location = System::Drawing::Point(-1, 612);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(999, 18);
 			this->panel6->TabIndex = 16;
@@ -1513,8 +1514,19 @@ private: System::Void buttonTopicChange_Click(System::Object^  sender, System::E
 	ChangeTopic^ TopicDialog = gcnew ChangeTopic();
 	TopicDialog->textBoxTopic->Text = this->labelTopic->Text;
 	TopicDialog->ShowDialog();
-	this->labelTopic->Text = TopicDialog->textBoxTopic->Text;
 
+	//Adjust Font Size
+	if (this->labelTopic->Width < System::Windows::Forms::TextRenderer::MeasureText(TopicDialog->textBoxTopic->Text,
+		gcnew System::Drawing::Font(this->labelTopic->Font->FontFamily, this->labelTopic->Font->Size, this->labelTopic->Font->Style)).Width)
+	{
+		this->labelTopic->Font = gcnew System::Drawing::Font(this->labelTopic->Font->FontFamily, 20, this->labelTopic->Font->Style);
+	}
+	else {
+		this->labelTopic->Font = gcnew System::Drawing::Font(this->labelTopic->Font->FontFamily, 22, this->labelTopic->Font->Style);
+	}
+
+	this->labelTopic->Text = TopicDialog->textBoxTopic->Text;
+	
 	//If topic has changed.
 	if (PreviousTopic != this->labelTopic->Text) {
 
