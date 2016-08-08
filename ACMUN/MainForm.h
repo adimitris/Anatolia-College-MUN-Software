@@ -17,13 +17,15 @@
 	To contact the author: Dimitrios Alexandridis, dimitrisalex@icloud.com
 */
 
-//Dependencies: MSCVR120.dll, MSVCP120.dll
+//DEPENDENCIES from Visual C++ Redistributable Packages: MSCVR120.dll, MSVCP120.dll
 
 #pragma once
-#include <time.h>
+
+
+#include <time.h>  //Library for time
 #include <string>
-#include "AddResolution.h"
-#include "ChangeTopic.h"
+#include "AddResolution.h"  //Include dialog for Resolution Submission
+#include "ChangeTopic.h"  //Include dialog that changes Topic TextBox
 
 namespace ACMUN {
 
@@ -35,12 +37,13 @@ namespace ACMUN {
 	using namespace System::Drawing;
 	using namespace System::IO;
 
-	int ResCount = 0;
-	int CountdownMin = 0;
-	int CountdownSec = 0;
-	int CountdownHour = 0;
-	bool isSpeakerSlotOccupied[25] = { 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-	bool isRecordReadOnly = 1;
+	//Variables declared and initialized
+	int ResCount = 0; //Number of Resolutions submitted
+	int CountdownMin = 0; //Minutes selected for countdown
+	int CountdownSec = 0; //Seconds selected for countdown
+	int CountdownHour = 0; //Hours selected for countdown
+	bool isSpeakerSlotOccupied[25] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }; //Speaker slots status
+	bool isRecordReadOnly = 1; //Variable that defines whether the Record is editable or read-only
 
 
 	/// <summary>
@@ -68,131 +71,68 @@ namespace ACMUN {
 				delete components;
 			}
 		}
-
+	//Declare graphics objects
 	private: System::Windows::Forms::Label^  labelTime;
 	private: System::Windows::Forms::Timer^  timerLocalTime;
-
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Label^  labelCommitteeName;
-
 	private: System::Windows::Forms::Label^  labelTitle;
-
 	private: System::Windows::Forms::Panel^  panel2;
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::ComboBox^  comboBoxCountryList;
-
 	private: System::Windows::Forms::Button^  buttonAddSpeaker;
 	private: System::Windows::Forms::ComboBox^  comboBoxPriorityNum;
-
-
-
-
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::ListView^  listViewSpeakerList;
-
 	private: System::Windows::Forms::ColumnHeader^  priorityNum;
 	private: System::Windows::Forms::ColumnHeader^  SpeakerName;
-
 	private: System::Windows::Forms::Button^  buttonRemoveSpeaker;
-
-
-
 	private: System::Windows::Forms::Button^  buttonNextSpeaker;
-
 	private: System::Windows::Forms::Panel^  panel3;
 	private: System::Windows::Forms::Label^  labelSessionRecord;
-
 	private: System::Windows::Forms::Label^  labelCountrySpeaking;
-
-
-
-
 	private: System::Windows::Forms::GroupBox^  groupBox5;
 	private: System::Windows::Forms::Button^  buttonAddRecord;
-
-
 	private: System::Windows::Forms::GroupBox^  groupBox6;
 	private: System::Windows::Forms::Button^  buttonAddCurrentSpeaker;
-
 	private: System::Windows::Forms::ComboBox^  comboBoxCurrentSpeakerList;
-
 	private: System::Windows::Forms::Panel^  panel4;
 	private: System::Windows::Forms::ListView^  listViewResolutions;
-
 	private: System::Windows::Forms::ColumnHeader^  columnHeader1;
 	private: System::Windows::Forms::ColumnHeader^  columnHeader2;
-
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Panel^  panel5;
 	private: System::Windows::Forms::Button^  buttonExit;
-
 	private: System::Windows::Forms::Button^  buttonCrisis;
 	private: System::Windows::Forms::Button^  buttonSaveRecord;
-
-
 	private: System::Windows::Forms::Button^  buttonTimerPause;
 	private: System::Windows::Forms::Button^  buttonTimerSet;
-
-
-
-
 	private: System::Windows::Forms::Label^  label9;
-
 	private: System::Windows::Forms::Button^  buttonRemoveResolution;
-
-
 	private: System::Windows::Forms::Button^  buttonAddResolution;
-
 	private: System::Windows::Forms::GroupBox^  groupBox7;
 	private: System::Windows::Forms::ComboBox^  comboBoxTimerSec;
-
-
 	private: System::Windows::Forms::Label^  label11;
 	private: System::Windows::Forms::ComboBox^  comboBoxTimerMin;
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^  labelCommitteeStatus;
-
 	private: System::Windows::Forms::RichTextBox^  richTextBoxRecordToAdd;
-private: System::Windows::Forms::TextBox^  textBoxRecord;
-
-
-
-
+	private: System::Windows::Forms::TextBox^  textBoxRecord;
 	private: System::Windows::Forms::GroupBox^  groupBox3;
-private: System::Windows::Forms::Button^  buttonUpdateCommitteeStatus;
-
-private: System::Windows::Forms::ComboBox^  comboBoxCommitteeStatus;
-
-
-
-private: System::Windows::Forms::Button^  buttonTopicChange;
-private: System::Windows::Forms::ComboBox^  comboBoxResNumToRemove;
-private: System::Windows::Forms::Timer^  timerCountdown;
-
-
-
-private: System::Windows::Forms::Label^  label4;
-private: System::Windows::Forms::LinkLabel^  linkLabel1;
-private: System::Windows::Forms::PictureBox^  pictureBox1;
-private: System::Windows::Forms::Label^  labelCountdown;
-
-private: System::Windows::Forms::Label^  label5;
-private: System::Windows::Forms::ComboBox^  comboBoxTimerHour;
-private: System::Windows::Forms::Button^  buttonEditRecord;
-private: System::Windows::Forms::Label^  labelTopic;
-private: System::Windows::Forms::Panel^  panel7;
-private: System::Windows::Forms::Panel^  panel6;
-
-
-
-
-
+	private: System::Windows::Forms::Button^  buttonUpdateCommitteeStatus;
+	private: System::Windows::Forms::ComboBox^  comboBoxCommitteeStatus;
+	private: System::Windows::Forms::Button^  buttonTopicChange;
+	private: System::Windows::Forms::ComboBox^  comboBoxResNumToRemove;
+	private: System::Windows::Forms::Timer^  timerCountdown;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::LinkLabel^  linkLabel1;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  labelCountdown;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::ComboBox^  comboBoxTimerHour;
+	private: System::Windows::Forms::Button^  buttonEditRecord;
+	private: System::Windows::Forms::Label^  labelTopic;
+	private: System::Windows::Forms::Panel^  panel7;
+	private: System::Windows::Forms::Panel^  panel6;
 
 	private: System::ComponentModel::IContainer^  components;
 	protected:
@@ -1262,6 +1202,7 @@ private: System::Windows::Forms::Panel^  panel6;
 
 
 	private: System::Void timerLocalTime_Tick(System::Object^  sender, System::EventArgs^  e) {
+				//Update time on labelTime every second.
 				 DateTime currentDateTime = DateTime::Now;
 				 this->labelTime->Text = currentDateTime.ToString();
 	}
@@ -1272,7 +1213,6 @@ private: System::Windows::Forms::Panel^  panel6;
 		if (comboBoxCountryList->SelectedIndex != -1) {
 			if (comboBoxPriorityNum->SelectedIndex == -1) {
 				int i = 0;
-
 				while (i < 25) {
 					if (isSpeakerSlotOccupied[i] == 0) { break; }
 					i++;
