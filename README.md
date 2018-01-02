@@ -8,10 +8,10 @@ The latest release can be found [here](https://github.com/adimitris/Anatolia-Col
 ## Screenshots
 
 Standard Screen:
-![Screenshot 1](Screenshot 1.png)
+![Screenshot 1](Screenshot_1.png)
 
 During operation:
-![Screenshot 2](Screenshot 2.png)
+![Screenshot 2](Screenshot_2.png)
 
 Crisis:
-![Screenshot 3](Screenshot 3.png)
+![Screenshot 3](Screenshot_3.png)
